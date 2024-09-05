@@ -24,11 +24,14 @@
                 width: 100%;
                 height: 100%;
                 background-color: rgba(0, 0, 0, 0.5); 
-                z-index: -1;
+                z-index: -1; /* overlap */
             }
-            
+
             main {font-family: 'Courier New', Courier, monospace;}
 
+            .gif-section {position: static; z-index: 1;}
+            .nav-section {position: absolute; z-index: 2;}
+            
             .highlighted-text {
                 background-color: rgba(0, 0, 0, 1); /* semi-transparent black background box */
                 padding: 10px;
@@ -47,31 +50,21 @@
             @keyframes blink-medium {0%, 100% {opacity: 1;}50% {opacity: 0;}}
 
             @keyframes blink-slow {0%, 100% {opacity: 1;}50% {opacity: 0;}}
-            
-            /*@keyframes blink {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
-            }
-            }*/
         </style>
     </head>
 
     <body>
         <header>
             <section style="text-align: center;"><samll>Hi! When you see this page, you might like to know it was created on <time datetime="2024-08-30">August 30, 2024</time>&nbsp;:)</samll></section>
-            <!-- Navigation Bar -->
-            <nav>
-                <ul class="navbar">
+            <nav class="nav-section">
+                <ul> <!--ul本身支持的属性很少-->
                     <li><a href="index.html" target="_blank">Breathe Space [click me back]</a></li>
-                    <li><a href="pages/aboutme.html" target="_blank">About ME</a></li>
+                    <li><a href="aboutme.html" target="_blank">About ME</a></li>
                 </ul> 
             </nav>
         </header>
 
-        <main aria-live="polite">
+        <main>
             <marquee direction="left" scrollamount="10" class="blink-fast"><h1>Hello, my name is GUO Shanshan.</h1></marquee>
             <marquee direction="left" scrollamount="6" class="blink-slow"><p>I am currently in my final semester of the Master of Marketing Communications program at the University of Melbourne. </p></marquee>
             <marquee direction="left" scrollamount="9" class="blink-fast"><p>This semester, I am on exchange at the University of North Carolina at Chapel Hill, where I am taking courses in Organizational Communication, Health Communication, Public Relations, and Interactive Media.</p></marquee>
@@ -85,13 +78,12 @@
             <marquee direction="left" scrollamount="7" class="blink-fast"><p>Colleagues often commend my ability to foster a collaborative environment, and customers appreciate my approachable demeanor and clear communication style.</p></marquee>
             <marquee direction="left" scrollamount="5" class="blink-slow"><p>I believe in the power of teamwork to overcome challenges and enhance the shopping experience.</p></marquee>
             <marquee direction="left" scrollamount="7" class="blink-medium"><p>My dedication to connecting with both team members and customers, combined with proactive problem-solving skills, makes me a valuable addition to any team.</p></marquee>
-                
-            <marquee style="position:absolute;top:0;left:0%;height:100%;width:20%;text-align:center;" direction="up" scrollamount="5">
-                <img src="images/jump57a7931a.gif" width="42" height= auto alt="a jumping pumpkin">
+            
+            <marquee class="gif-section" style="position:absolute;top:0;left:0%;height:100%;width:20%;text-align:center;" direction="up" scrollamount="5">
+                    <img src="images/jump57a7931a.gif" width="42" height= auto alt="a jumping pumpkin">
             </marquee>
-
-            <marquee style="position:absolute;top:0;left:20%;height:100%;width:20%;text-align:center;" direction="up" scrollamount="5">
-                <img src="images/black cat.gif" width="42" height= auto alt="a black cat">
+            <marquee class="gif-section" style="position:absolute;top:0;left:20%;height:100%;width:20%;text-align:center;" direction="up" scrollamount="5">
+                    <img src="images/black cat.gif" width="42" height= auto alt="a black cat">
             </marquee>
 
             <aside>
