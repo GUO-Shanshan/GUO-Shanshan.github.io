@@ -7,7 +7,7 @@
             body {
                 color:aliceblue;
                 text-shadow:  1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
-                background-image: url("images/gaetan-othenin-girard-IkmH8vFtVAc-unsplash.jpg");
+                background-image: url("../images/gaetan-othenin-girard-IkmH8vFtVAc-unsplash.jpg");
                 background-repeat: no-repeat;
                 background-position: center;/* put the background image center */
                 background-size: 100%;
@@ -31,6 +31,12 @@
 
             .gif-section {position: static; z-index: 1;}
             .nav-section {position: absolute; z-index: 2;}
+
+            p:hover {
+                color: chartreuse;
+                font-size: larger;
+                font-weight: bolder;
+            }
             
             ul {
                 list-style-type: none;
@@ -45,11 +51,11 @@
             }
 
             li a {
-                display: block;
+                text-decoration: none;
                 color: white;
                 text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
+                display: block;
+                padding: 10px 20px ;
             }
 
             /* Change the link color to #111 (black) on hover */
@@ -80,16 +86,21 @@
 
     <body>
         <header>
-            <section style="text-align: center;"><samll>Hi! When you see this page, you might like to know it was created on <time datetime="2024-08-30">August 30, 2024</time>&nbsp;:)</samll></section>
+            <section style="text-align: center;"><samll>Hi! When you see this page, you might like to know it was created on <time datetime="2024-08-30">August 30, 2024</time>&nbsp;:)</samll></section><br>
             <nav class="nav-section">
                 <ul> <!--ul本身支持的属性很少-->
-                    <li><a href="index.html" target="_blank">Breathe Space [click me back]</a></li>
-                    <li><a href="aboutme.html" target="_blank">About ME</a></li>
+                    <li><a href="../index.html" target="_blank">Breathe Space [click me back]</a></li>
+                    <li><a href="../pages/aboutme.html" target="_blank">About ME</a></li>
+                    <li><a href="#job opportunity">I Wanna Give You a Job Opportunity!</a></li>
                 </ul> 
             </nav>
         </header>
 
         <main>
+            <br><br>
+            <marquee class="gif-section" direction="right" scrollamount="16">
+                <img src="../images/speceship.gif" width="35" height= auto alt="a spaceship">
+            </marquee>
             <marquee direction="left" scrollamount="10" class="blink-fast"><h1>Hello, my name is GUO Shanshan.</h1></marquee>
             <marquee direction="left" scrollamount="6" class="blink-slow"><p>I am currently in my final semester of the Master of Marketing Communications program at the University of Melbourne. </p></marquee>
             <marquee direction="left" scrollamount="9" class="blink-fast"><p>This semester, I am on exchange at the University of North Carolina at Chapel Hill, where I am taking courses in Organizational Communication, Health Communication, Public Relations, and Interactive Media.</p></marquee>
@@ -104,15 +115,19 @@
             <marquee direction="left" scrollamount="5" class="blink-slow"><p>I believe in the power of teamwork to overcome challenges and enhance the shopping experience.</p></marquee>
             <marquee direction="left" scrollamount="7" class="blink-medium"><p>My dedication to connecting with both team members and customers, combined with proactive problem-solving skills, makes me a valuable addition to any team.</p></marquee>
             
-            <marquee class="gif-section" style="position:absolute;top:0;left:0%;height:100%;width:20%;text-align:center;" direction="up" scrollamount="5">
-                    <img src="images/jump57a7931a.gif" width="42" height= auto alt="a jumping pumpkin">
-            </marquee>
-            <marquee class="gif-section" style="position:absolute;top:0;left:20%;height:100%;width:20%;text-align:center;" direction="up" scrollamount="5">
-                    <img src="images/black cat.gif" width="42" height= auto alt="a black cat">
+            <marquee class="gif-section" direction="right" scrollamount="18">
+                    <img src="../images/rotating green star.gif" width="42" height= auto alt="a rotating green star">
             </marquee>
 
-            <aside>
-                <!--add something here-->
+            <aside id="job opportunity">
+                <p>Resize the browser window to see the effect.</p>
+                <form class="form-inline" action="/action_page.php">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter email" name="email">
+                    <label for="pwd">Password:</label>
+                    <input type="password" id="pwd" placeholder="Enter password" name="pswd">
+                    <button type="submit">Submit</button>
+                </form>          
             </aside>
         </main>
     </body>

@@ -16,8 +16,11 @@
                 background-position: center;/* put the background image center */
                 background-size: 100%;
                 background-attachment: fixed;
-                /*background-color:black;*/
                 color: white;
+            }
+
+            p:hover {
+                color: chartreuse;
             }
 
             main {text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* add black shadow */
@@ -30,8 +33,8 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.5); 
-                z-index: -1;
+                background-color: rgba(0, 0, 0, 0.4); 
+                z-index: -1; /* 'z-index' has to use together with 'position' */
             }
             article {
                 line-height: 1.6;
@@ -49,6 +52,7 @@
                 border-radius: 5px; /* rounded corners, can be adjusted */
             }
             
+            /* for navbar format */
             ul {
                 list-style-type: none;
                 margin: 0;
@@ -94,7 +98,7 @@
                     <li><a href="#lyrics"><b>Lyrics</b></a></li>
                     <li><a href="#About the Song"><b>About the Song</b></a></li>
                     <li><a href="#Rhythm Zone"><b>Rhythm Zone</b></a></li>
-                    <li><a href="aboutme.html" target="_blank"><b>About ME</b></a></li>
+                    <li><a href="pages/aboutme.html" target="_blank"><b>About ME</b></a></li>
                 </ul> 
             </nav>
         </header>
@@ -121,18 +125,18 @@
 
             <br>
             <aside id="About the Song" class="container" style="text-align: center;">
-                <p><small>Written By: Naomi&nbsp;Ruth&nbsp;Hamilton<br>
+                <small>Written By: Naomi&nbsp;Ruth&nbsp;Hamilton<br>
                 Released: 6&nbsp;May&nbsp;2016<br>
                 Album: <a href="https://g.co/kgs/473eWFM" target="_blank">Parma&nbsp;Violets</a><br>
-                Genre: <a href="https://g.co/kgs/oVSotFn" target="_blank">Alternative/Indie</a></small></p>
+                Genre: <a href="https://g.co/kgs/oVSotFn" target="_blank">Alternative/Indie</a></small>
                 
                 <!-- The following link directly comes from Apple Music's Share Button using the "Copy Embed Code" option for the song "Dandelion". -->
             </aside><br>
 
-            <section id="Rhythm Zone" class="container">
-                <h2>Rhythm Zone</h2>
+            <section id="Rhythm Zone" class="container" style="background-color:rgba(0, 0, 0, 0.398)">
+                <br><h2>Rhythm Zone</h2>
                 <p><iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/dandelion/1355124088?i=1355124645&l=en-GB"></iframe></p>
-                <p><iframe style="width:100%;max-width:660px;overflow:hidden;background:transparent;" src="https://open.spotify.com/embed/track/3xF3mHDKIRjdiEgGC8ZLBo?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe style="width:100%;max-width:660px;overflow:hidden;background:transparent;" src="https://open.spotify.com/embed/track/3xF3mHDKIRjdiEgGC8ZLBo?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p><br>
             </section>
         </main>
 
@@ -145,8 +149,8 @@
     
     <footer>
         <!-- Credit Section -->
-        <p><small>Lyrics from the song <em>"Dandelion"</em> by <a href="https://www.jealousofthebirdsmusic.com/" target="_blank">Jealous&nbsp;of&nbsp;the&nbsp;Birds</a>.<br>
-        © 2018 Big Space Records under exclusive license to Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States</small></p>
+        <br><small>Lyrics from the song <em>"Dandelion"</em> by <a href="https://www.jealousofthebirdsmusic.com/" target="_blank">Jealous&nbsp;of&nbsp;the&nbsp;Birds</a>.<br>
+        © 2018 Big Space Records under exclusive license to Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States</small>
     </footer>
     
 </html>
