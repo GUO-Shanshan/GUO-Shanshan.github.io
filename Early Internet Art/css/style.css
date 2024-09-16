@@ -1,0 +1,109 @@
+body {
+    color: aliceblue;
+    text-shadow:  1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    background-image: url("../images/gaetan-othenin-girard-IkmH8vFtVAc-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;/* put the background image center */
+    background-size: 100%;
+    background-attachment: fixed;
+    background-color:black;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; /* overlap */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+
+main {
+    color:white;
+    display: flex;
+    flex: 1; /* Allows main to take up available space */
+    font-size: 24px; /* This will make the body text larger */
+    line-height: 1; /* Optional: Adjust line height for readability */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+footer {
+    color: white; /* Optional: Text color for footer */
+    text-align: left;
+    padding: 10px;
+}
+
+h1, a {color: white;}
+
+.coming-soon-regular {font-family: "Coming Soon", cursive; font-weight: 400; font-style: normal;}/* 'Coming Soon' is from the Google Font */
+
+.gif-section {position: static; z-index: 1;}
+.nav-section {position: absolute; z-index: 2;}
+
+p:hover {
+    color: chartreuse;
+    font-size:xx-large;
+    font-weight: bolder;
+}
+
+a:link {
+    color:white; 
+    text-decoration:none;
+}
+
+a:hover {color: chartreuse;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 10px 20px ;
+}
+
+/* Change the link color to #111 (black) on hover 
+li a:hover {
+    background-color: #111;
+}*/
+
+.highlighted-text {
+    background-color: rgba(0, 0, 0, 1); /* semi-transparent black background box */
+    padding: 10px;
+    display: inline-block; /* makes the background box wrap around the text */
+    border-radius: 5px; /* rounded corners, can be adjusted */
+}
+
+.blink-fast {animation: blink-fast 0.5s infinite;}
+
+.blink-medium {animation: blink-medium 0.6s infinite;}
+
+.blink-slow {animation: blink-slow 0.8s infinite;}
+
+@keyframes blink-fast {0%, 100% {opacity: 1;}50% {opacity: 0;}}
+
+@keyframes blink-medium {0%, 100% {opacity: 1;}50% {opacity: 0;}}
+
+@keyframes blink-slow {0%, 100% {opacity: 1;}50% {opacity: 0;}}
