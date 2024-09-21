@@ -1,0 +1,73 @@
+.background_box {
+    position: relative;
+    z-index: 1;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+body {
+    background-image: url('../images/julia-maior-P6rShCD6Sx4-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+main::before {
+    content: '';
+    position: fixed;
+    background-size: cover; 
+    z-index: 2; 
+}
+
+.item {
+    padding: 10px; 
+    text-align: center; 
+    /*border: 1px solid #ddd;*/
+}
+  
+.control_box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(100%);
+}
+
+.control_button {
+    position: relative;
+    z-index: 3;
+    top: -20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.control_button > div {
+    margin: 5px;
+}
+
+.emoji {
+    font-size: 30px;
+    filter: grayscale(100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-size:150%;
+}
+
+footer {
+    position:fixed;
+    bottom: 0%;
+    z-index: 5;
+    text-align: left;
+}
