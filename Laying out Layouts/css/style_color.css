@@ -3,8 +3,24 @@
     z-index: 1;
     display:grid;
     grid-template-columns: 1fr 1fr;
-    background-color:aquamarine;
     gap: 20px;
+}
+
+.photo-frame {
+    border: 10px solid #fff;
+    padding: 10px;
+    border: 5px solid #ccc;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-image: url('../images/julia-maior-P6rShCD6Sx4-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
 .item {
@@ -28,7 +44,7 @@
 .control_button {
     position: relative;
     z-index: 2;
-    top: -20px;
+    top: 0px;
     display: flex;
     flex-direction: row;
 }

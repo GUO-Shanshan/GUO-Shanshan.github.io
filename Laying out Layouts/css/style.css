@@ -4,10 +4,21 @@
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    filter: grayscale(100%);
 }
 
+.photo-frame {
+    border: 10px solid #fff;
+    padding: 10px;
+    border: 5px solid #ccc;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    display: block;
+    max-width: 100%;
+}
+  
+
 body {
-    background-image: url('../images/julia-maior-P6rShCD6Sx4-unsplash.jpg');
+    background-image: url('../images/giphy.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -71,3 +82,4 @@ footer {
     z-index: 5;
     text-align: left;
 }
+
