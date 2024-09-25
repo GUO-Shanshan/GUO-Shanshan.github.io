@@ -3,10 +3,10 @@
     z-index: 1;
     display:flex;
     flex-wrap: wrap;
-    margin: 20px;
     align-content:space-around;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 40px;
+    justify-content: center;
 }
 
 .photo-frame {
@@ -18,12 +18,25 @@
     max-width: 100%;
 }
 
+div img:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s;
+}
+
 body {
     background-image: url('../images/julia-maior-P6rShCD6Sx4-unsplash.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
     background-attachment: fixed;
+}
+
+main {
+    font-size: 48px;
+}
+
+div img {
+    float: left;
 }
 
 .item {
@@ -47,7 +60,7 @@ body {
 .control_button {
     position: relative;
     z-index: 2;
-    top: 0px;
+    top: -20px;
     display: flex;
     flex-direction: row;
 }
@@ -74,3 +87,10 @@ footer {
     z-index: 5;
     text-align: left;
 }
+
+.permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  
