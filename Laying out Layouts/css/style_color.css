@@ -1,7 +1,10 @@
 .background_box {
     position: relative;
     z-index: 1;
-    display:grid;
+    display:flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    align-content:space-around;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
