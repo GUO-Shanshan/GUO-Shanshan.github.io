@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mood Tracker</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f0f0f0;
+            }
+            .container {
+                text-align: center;
+            }
+            button {
+                padding: 10px 20px;
+                margin: 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            .good {
+                background-color: #4CAF50;
+                color: white;
+            }
+            .bad {
+                background-color: #f44336;
+                color: white;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1>How are you feeling today?</h1>
+            <button class="good">I'm okay</button>
+            <button class="bad" id="notGoodBtn">Not so good</button>
+        </div>
+
+        <script>
+            // Handle the "I'm okay" button
+            document.querySelector('.good').addEventListener('click', function() {
+                alert('Glad to hear you\'re okay! Keep it up!');
+            });
+
+            // Handle the "Not so good" button
+            document.getElementById('notGoodBtn').addEventListener('click', function() {
+                let response = confirm('Have you tried going for a walk?');
+                if (response) {
+                    // Redirect to mood recording page if the answer is "Yes"
+                    window.location.href = 'mood-processor.html';
+                } else {
+                    alert('Maybe going for a walk might make you feel better :)');
+                }
+            });
+        </script>
+    </body>
+</html>
+

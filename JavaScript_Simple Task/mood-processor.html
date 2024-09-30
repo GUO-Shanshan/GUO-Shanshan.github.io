@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Processor</title>
+    <style>
+        body {
+            font-family:'Courier New', Courier, monospace;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            text-align: left;
+        }
+        button {
+            background-color: #FFFFFF;
+            border: 1px solid #222222;
+            border-radius: 8px;
+            box-sizing: border-box;
+            color: #222222;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            margin: 0;
+            padding: 13px 23px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mood Processor</h1>
+    <main class="container">
+        <p><button id="getTimeButton">Now the time is</button> <span id="timeDisplay"> </span></p>
+        <p><button id="getLocationButton">You're in</button> <span id="locationDisplay"> </span></p>
+        <p><button id="getWeatherButton">The current weather is</button><span id="weatherDisplay"> </span></p>
+        <h2>Here are some interesting things you can try:</h2>
+        <form>
+                <label><input type="checkbox" name="task"> Walk a kilometer to buy coffee.</label><br>
+                <label><input type="checkbox" name="task"> Take a new route home from work.</label><br>
+                <label><input type="checkbox" name="task"> Go to the market to buy fresh fruits and vegetables.</label><br>
+                <label><input type="checkbox" name="task"> Exercise.</label><br>
+                <label><input type="checkbox" name="task"> Listen to songs you loved at 18.</label><br>
+                <label><input type="checkbox" name="task"> Spend 20 minutes in the park.</label><br>
+                <label><input type="checkbox" name="task"> Imagine winning ten million in the lottery.</label><br>
+                <label><input type="checkbox" name="task"> Hug a close friend or pet for a long time.</label><br>
+                <label><input type="checkbox" name="task"> Randomly get on a bus.</label><br>
+                <label><input type="checkbox" name="task"> Write a poem or short essay to express your emotions.</label><br>
+                <label><input type="checkbox" name="task"> Watch two or three movies in a row at the cinema.</label><br>
+                <label><input type="checkbox" name="task"> Plan a trip.</label><br>
+                <label><input type="checkbox" name="task"> Read at the library and make neat and beautiful notes.</label><br>
+                <label><input type="checkbox" name="task"> Run on the grass.</label><br>
+                <label><input type="checkbox" name="task"> Walk on the sidewalk with headphones on, playing film or TV OSTs.</label><br>
+                <label><input type="checkbox" name="task"> Sleep and have strange dreams.</label><br>
+                <label><input type="checkbox" name="task"> Go to a concert.</label><br>
+                <label><input type="checkbox" name="task"> Mini escape: visit a stranger’s street or stay at a hotel in a neighboring city to disconnect from familiar surroundings.</label><br>
+                <label><input type="checkbox" name="task"> Go to a large supermarket and limit yourself to buying just one item, allowing for careful selection.</label><br>
+                <label><input type="checkbox" name="task"> Visit a food street near the university.</label><br>
+                <label><input type="checkbox" name="task"> Compliment others.</label><br>
+                <label><input type="checkbox" name="task"> Take a bath.</label><br>
+                <label><input type="checkbox" name="task"> Sleep deeply.</label><br>
+                <label><input type="checkbox" name="task"> Imagine you are an alien observing humans.</label><br>
+                <label><input type="checkbox" name="task"> Volunteer.</label><br>
+                <label><input type="checkbox" name="task"> Look through your previous social media posts.</label><br>
+                <label><input type="checkbox" name="task"> Wear an outfit you wouldn’t normally wear.</label><br>
+                <label><input type="checkbox" name="task"> Visit an exhibition.</label><br>
+                <label><input type="checkbox" name="task"> Recall the name of a movie or the second half of a poem without using your phone—just rely on memory.</label><br>
+                <label><input type="checkbox" name="task"> Try food combinations you’ve never eaten before.</label><br>
+                <label><input type="checkbox" name="task"> Read children’s picture books; they contain the cutest stories in the world.</label><br>
+                <label><input type="checkbox" name="task"> Wear nicer socks and shoes, as this can help relieve fatigue.</label><br>
+                <label><input type="checkbox" name="task"> Find something you love—anime, idols, pets, games, etc.—and immerse yourself in it completely.</label><br>
+                <label><input type="checkbox" name="task"> Go shopping with friends and guess the prices of items.</label><br>
+                <label><input type="checkbox" name="task"> Turn ordinary days into anniversaries; for example, if you want to eat cake today, then today is Cake Anniversary Day. Every day can be an anniversary!</label><br>
+        </form>
+    </main>
+    <script>
+        document.getElementById('getTimeButton').addEventListener('click', function() {
+            function updateTime() {
+                const currentTime = new Date().toLocaleTimeString();
+                document.getElementById('timeDisplay').textContent = 'Current Time: ' + currentTime;
+            }
+            updateTime();
+            setInterval(updateTime, 1000);
+        });
+
+        // here I use TimeZone to figure out where the user is
+        document.getElementById('getLocationButton').addEventListener('click',function() {
+            const timeZoneToCountry = {
+                "America/New_York": "United States",
+                "America/Los_Angeles": "United States",
+                "Europe/London": "United Kingdom",
+                "Asia/Tokyo": "Japan",
+                "America/Chicago": "United States",
+                "America/Denver": "United States",
+                "America/Phoenix": "United States",
+                "America/Anchorage": "United States",
+                "America/Halifax": "Canada",
+                "America/Vancouver": "Canada",
+                "America/Toronto": "Canada",
+                "America/Mexico_City": "Mexico",
+                "America/Sao_Paulo": "Brazil",
+                "America/Buenos_Aires": "Argentina",
+                "America/Lima": "Peru",
+                "America/Santiago": "Chile",
+                "Europe/Paris": "France",
+                "Europe/Berlin": "Germany",
+                "Europe/Madrid": "Spain",
+                "Europe/Rome": "Italy",
+                "Europe/Athens": "Greece",
+                "Europe/Moscow": "Russia",
+                "Europe/Istanbul": "Turkey",
+                "Europe/Stockholm": "Sweden",
+                "Europe/Oslo": "Norway",
+                "Europe/Amsterdam": "Netherlands",
+                "Europe/Zurich": "Switzerland",
+                "Europe/Warsaw": "Poland",
+                "Europe/Dublin": "Ireland",
+                "Asia/Shanghai": "China",
+                "Asia/Seoul": "South Korea",
+                "Asia/Bangkok": "Thailand",
+                "Asia/Singapore": "Singapore",
+                "Asia/Hong_Kong": "China",
+                "Asia/Kolkata": "India",
+                "Asia/Jakarta": "Indonesia",
+                "Asia/Dubai": "United Arab Emirates",
+                "Asia/Manila": "Philippines",
+                "Asia/Kuala_Lumpur": "Malaysia",
+                "Asia/Riyadh": "Saudi Arabia",
+                "Asia/Tehran": "Iran",
+                "Asia/Karachi": "Pakistan",
+                "Asia/Baghdad": "Iraq",
+                "Asia/Damascus": "Syria",
+                "Asia/Beirut": "Lebanon",
+                "Australia/Sydney": "Australia",
+                "Australia/Melbourne": "Australia",
+                "Australia/Brisbane": "Australia",
+                "Australia/Perth": "Australia",
+                "Pacific/Auckland": "New Zealand",
+                "Pacific/Honolulu": "United States",
+                "Pacific/Fiji": "Fiji",
+                "Pacific/Tahiti": "French Polynesia",
+                "Africa/Cairo": "Egypt",
+                "Africa/Johannesburg": "South Africa",
+                "Africa/Lagos": "Nigeria",
+                "Africa/Nairobi": "Kenya",
+                "Africa/Casablanca": "Morocco",
+                "Africa/Accra": "Ghana"
+            };
+            const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            function getCountryFromTimeZone(timeZone) {
+                if (timeZoneToCountry[timeZone]) {
+                    const country = timeZoneToCountry[timeZone];
+                    document.getElementById('locationDisplay').innerText = `${country}`;
+                } else {
+                    document.getElementById('locationDisplay').innerText = 'Unknown Country';
+                }
+            }
+            getCountryFromTimeZone(timeZone); // Call the getCountryFromTimeZone() function and pass timeZone as an argument.
+        })
+        
+        // Function to get weather data from an external API (using OpenWeatherMap as an example)
+        document.getElementById('getWeatherButton').addEventListener('click', function() {
+            // Replace 'YOUR_API_KEY' with your actual API key
+            const apiKey = 'YOUR_API_KEY';
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=${apiKey}`;
+
+            fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const weather = data.weather[0].description;
+                const temperature = (data.main.temp - 273.15).toFixed(2); // Convert from Kelvin to Celsius
+                document.getElementById('weatherDisplay').textContent = 
+                    `Weather: ${weather}, Temperature: ${temperature}°C`;
+            })
+            .catch(error => {
+                document.getElementById('weatherDisplay').textContent = "Unable to retrieve weather data.";
+            });
+        });
+    </script>
+</body>
+</html>
