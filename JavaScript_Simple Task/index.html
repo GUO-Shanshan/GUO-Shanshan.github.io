@@ -77,8 +77,7 @@
             document.getElementById('notGoodBtn').addEventListener('click', function() {
                 let response = confirm('Have you tried going for a walk?');
                 if (response) {
-                    // Redirect to mood recording page if the answer is "Yes"
-                    window.location.href = 'mood-processor.html';
+                    window.location.href = 'mood-processor.html'; // Redirect to mood processor page if the answer is "Yes"
                 } else {
                     alert('Maybe going for a walk might make you feel better :)');
                 }
