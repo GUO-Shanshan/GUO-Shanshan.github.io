@@ -111,7 +111,7 @@
                 setInterval(updateTime, 1000);
             });
 
-            // here I use TimeZone to figure out where the user is
+            // here I use TimeZone to make sure where the user is
             document.getElementById('getLocationButton').addEventListener('click',function() {
                 const timeZoneToCountry = {
                     "America/New_York": "United States",
@@ -188,12 +188,12 @@
             
             // Function to get weather data from an external API
             document.getElementById('getWeatherButton').addEventListener('click', function() {
-            fetch("https://api.open-meteo.com/v1/forecast?latitude=35.9132&longitude=-79.0558&current_weather=true")
-            .then(response => response.json())
-            .then(data => {
-                const currentTemp = data.current_weather.temperature;
-                document.getElementById("weatherDisplay").innerHTML = `Current Temperature: ${currentTemp}°C`;
-            })
+                fetch("https://api.open-meteo.com/v1/forecast?latitude=35.9132&longitude=-79.0558&current_weather=true")
+                .then(response => response.json())
+                .then(data => {
+                    const currentTemp = data.current_weather.temperature;
+                    document.getElementById("weatherDisplay").innerHTML = `Current Temperature: ${currentTemp}°C`;
+                })
             .catch(error => console.error("Unable to retrieve weather data."));
             })
         </script>
