@@ -4,9 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mood Tracker</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
         <style>
             body {
-                font-family: Arial, sans-serif;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -17,36 +19,61 @@
                 text-align: center;
             }
             button {
-                padding: 10px 20px;
-                margin: 10px;
-                font-size: 16px;
+                background-color: #FFFFFF;
+                border: 1px solid #222222;
+                border-radius: 8px;
+                box-sizing: border-box;
+                color: #222222;
                 cursor: pointer;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                margin: 0;
+                padding: 13px 23px;
+                position: relative;
+                text-align: center;
+                text-decoration: none;
+                width: auto;
             }
             .good {
-                background-color: #4CAF50;
-                color: white;
+                color:black;
             }
             .bad {
-                background-color: #f44336;
-                color: white;
+                color: black;
             }
+            .gowun-batang-regular {
+                font-family: "Gowun Batang", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            .gowun-batang-bold {
+                font-family: "Gowun Batang", serif;
+                font-weight: 700;
+                font-style: normal;
+            }
+            footer {
+                position:fixed;
+                bottom: 0%;
+                z-index: 2;
+            }   
         </style>
     </head>
     
-    <body>
-        <div class="container">
+    <body class="gowun-batang-regular">
+        <main class="container">
             <h1>How are you feeling today?</h1>
-            <button class="good">I'm okay</button>
-            <button class="bad" id="notGoodBtn">Not so good</button>
-        </div>
+            <button class="good gowun-batang-regular">I'm okay</button>
+            <button class="bad gowun-batang-regular" id="notGoodBtn">Not so good</button>
+        </main>
 
         <script>
-            // Handle the "I'm okay" button
+            // "I'm okay" button
             document.querySelector('.good').addEventListener('click', function() {
                 alert('Glad to hear you\'re okay! Keep it up!');
             });
 
-            // Handle the "Not so good" button
+            // "Not so good" button
             document.getElementById('notGoodBtn').addEventListener('click', function() {
                 let response = confirm('Have you tried going for a walk?');
                 if (response) {
@@ -58,5 +85,8 @@
             });
         </script>
     </body>
+    <footer>
+        <small>Made by Shanshan Guo © 2024 Mood Tracker. All rights reserved.</small>
+    </footer>
 </html>
 

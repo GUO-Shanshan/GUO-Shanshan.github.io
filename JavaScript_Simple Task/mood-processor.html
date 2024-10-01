@@ -1,50 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mood Processor</title>
-    <style>
-        body {
-            font-family:'Courier New', Courier, monospace;
-            height: 100vh;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mood Processor</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family:'Courier New', Courier, monospace;
+                height: 100vh;
+            }
 
-        h1 {
-            text-align: center;
-        }
+            h1 {
+                text-align: center;
+                font-size: 300%
+            }
 
-        .container {
-            text-align: left;
-        }
-        button {
-            background-color: #FFFFFF;
-            border: 1px solid #222222;
-            border-radius: 8px;
-            box-sizing: border-box;
-            color: #222222;
-            cursor: pointer;
-            display: inline-block;
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 20px;
-            margin: 0;
-            padding: 13px 23px;
-            position: relative;
-            text-align: center;
-            text-decoration: none;
-            width: auto;
-        }
-    </style>
-</head>
-<body>
-    <h1>Mood Processor</h1>
-    <main class="container">
-        <p><button id="getTimeButton">Now the time is</button> <span id="timeDisplay"> </span></p>
-        <p><button id="getLocationButton">You're in</button> <span id="locationDisplay"> </span></p>
-        <p><button id="getWeatherButton">The current weather is</button><span id="weatherDisplay"> </span></p>
-        <h2>Here are some interesting things you can try:</h2>
-        <form>
+            .container {
+                text-align: left;
+            }
+            button {
+                background-color: #FFFFFF;
+                border: 1px solid #222222;
+                border-radius: 8px;
+                box-sizing: border-box;
+                color: #222222;
+                cursor: pointer;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                margin: 0;
+                padding: 13px 23px;
+                position: relative;
+                text-align: center;
+                text-decoration: none;
+                width: auto;
+            }
+            footer {
+                position: relative;
+                bottom: 0%;
+                text-align: center;
+            } 
+            .gowun-batang-regular {
+                font-family: "Gowun Batang", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            .gowun-batang-bold {
+                font-family: "Gowun Batang", serif;
+                font-weight: 700;
+                font-style: normal;
+            }
+        </style>
+    </head>
+    <body class="gowun-batang-regular">
+        <h1>Mood Processor</h1>
+        <main class="container">
+            <p><button id="getTimeButton" class="gowun-batang-bold">Now the time is</button> <span id="timeDisplay"> </span></p>
+            <p><button id="getLocationButton" class="gowun-batang-bold">You're in</button> <span id="locationDisplay"> </span></p>
+            <p><button id="getWeatherButton" class="gowun-batang-bold">The current weather is</button> <span id="weatherDisplay"> </span></p>
+            <h2>Here are some interesting things you can try:</h2>
+            <form>
                 <label><input type="checkbox" name="task"> Walk a kilometer to buy coffee.</label><br>
                 <label><input type="checkbox" name="task"> Take a new route home from work.</label><br>
                 <label><input type="checkbox" name="task"> Go to the market to buy fresh fruits and vegetables.</label><br>
@@ -79,112 +98,107 @@
                 <label><input type="checkbox" name="task"> Wear nicer socks and shoes, as this can help relieve fatigue.</label><br>
                 <label><input type="checkbox" name="task"> Find something you love—anime, idols, pets, games, etc.—and immerse yourself in it completely.</label><br>
                 <label><input type="checkbox" name="task"> Go shopping with friends and guess the prices of items.</label><br>
-                <label><input type="checkbox" name="task"> Turn ordinary days into anniversaries; for example, if you want to eat cake today, then today is Cake Anniversary Day. Every day can be an anniversary!</label><br>
-        </form>
-    </main>
-    <script>
-        document.getElementById('getTimeButton').addEventListener('click', function() {
-            function updateTime() {
-                const currentTime = new Date().toLocaleTimeString();
-                document.getElementById('timeDisplay').textContent = 'Current Time: ' + currentTime;
-            }
-            updateTime();
-            setInterval(updateTime, 1000);
-        });
-
-        // here I use TimeZone to figure out where the user is
-        document.getElementById('getLocationButton').addEventListener('click',function() {
-            const timeZoneToCountry = {
-                "America/New_York": "United States",
-                "America/Los_Angeles": "United States",
-                "Europe/London": "United Kingdom",
-                "Asia/Tokyo": "Japan",
-                "America/Chicago": "United States",
-                "America/Denver": "United States",
-                "America/Phoenix": "United States",
-                "America/Anchorage": "United States",
-                "America/Halifax": "Canada",
-                "America/Vancouver": "Canada",
-                "America/Toronto": "Canada",
-                "America/Mexico_City": "Mexico",
-                "America/Sao_Paulo": "Brazil",
-                "America/Buenos_Aires": "Argentina",
-                "America/Lima": "Peru",
-                "America/Santiago": "Chile",
-                "Europe/Paris": "France",
-                "Europe/Berlin": "Germany",
-                "Europe/Madrid": "Spain",
-                "Europe/Rome": "Italy",
-                "Europe/Athens": "Greece",
-                "Europe/Moscow": "Russia",
-                "Europe/Istanbul": "Turkey",
-                "Europe/Stockholm": "Sweden",
-                "Europe/Oslo": "Norway",
-                "Europe/Amsterdam": "Netherlands",
-                "Europe/Zurich": "Switzerland",
-                "Europe/Warsaw": "Poland",
-                "Europe/Dublin": "Ireland",
-                "Asia/Shanghai": "China",
-                "Asia/Seoul": "South Korea",
-                "Asia/Bangkok": "Thailand",
-                "Asia/Singapore": "Singapore",
-                "Asia/Hong_Kong": "China",
-                "Asia/Kolkata": "India",
-                "Asia/Jakarta": "Indonesia",
-                "Asia/Dubai": "United Arab Emirates",
-                "Asia/Manila": "Philippines",
-                "Asia/Kuala_Lumpur": "Malaysia",
-                "Asia/Riyadh": "Saudi Arabia",
-                "Asia/Tehran": "Iran",
-                "Asia/Karachi": "Pakistan",
-                "Asia/Baghdad": "Iraq",
-                "Asia/Damascus": "Syria",
-                "Asia/Beirut": "Lebanon",
-                "Australia/Sydney": "Australia",
-                "Australia/Melbourne": "Australia",
-                "Australia/Brisbane": "Australia",
-                "Australia/Perth": "Australia",
-                "Pacific/Auckland": "New Zealand",
-                "Pacific/Honolulu": "United States",
-                "Pacific/Fiji": "Fiji",
-                "Pacific/Tahiti": "French Polynesia",
-                "Africa/Cairo": "Egypt",
-                "Africa/Johannesburg": "South Africa",
-                "Africa/Lagos": "Nigeria",
-                "Africa/Nairobi": "Kenya",
-                "Africa/Casablanca": "Morocco",
-                "Africa/Accra": "Ghana"
-            };
-            const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-            function getCountryFromTimeZone(timeZone) {
-                if (timeZoneToCountry[timeZone]) {
-                    const country = timeZoneToCountry[timeZone];
-                    document.getElementById('locationDisplay').innerText = `${country}`;
-                } else {
-                    document.getElementById('locationDisplay').innerText = 'Unknown Country';
+                <label><input type="checkbox" name="task"> Turn ordinary days into anniversaries; for example, if you want to eat cake today, then today is Cake Anniversary Day. Every day can be an anniversary!</label><br><br>
+            </form>
+        </main>
+        <script>
+            document.getElementById('getTimeButton').addEventListener('click', function() {
+                function updateTime() {
+                    const currentTime = new Date().toLocaleTimeString();
+                    document.getElementById('timeDisplay').textContent = 'Current Time: ' + currentTime;
                 }
-            }
-            getCountryFromTimeZone(timeZone); // Call the getCountryFromTimeZone() function and pass timeZone as an argument.
-        })
-        
-        // Function to get weather data from an external API (using OpenWeatherMap as an example)
-        document.getElementById('getWeatherButton').addEventListener('click', function() {
-            // Replace 'YOUR_API_KEY' with your actual API key
-            const apiKey = 'YOUR_API_KEY';
-            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=${apiKey}`;
+                updateTime();
+                setInterval(updateTime, 1000);
+            });
 
-            fetch(apiUrl)
+            // here I use TimeZone to figure out where the user is
+            document.getElementById('getLocationButton').addEventListener('click',function() {
+                const timeZoneToCountry = {
+                    "America/New_York": "United States",
+                    "America/Los_Angeles": "United States",
+                    "Europe/London": "United Kingdom",
+                    "Asia/Tokyo": "Japan",
+                    "America/Chicago": "United States",
+                    "America/Denver": "United States",
+                    "America/Phoenix": "United States",
+                    "America/Anchorage": "United States",
+                    "America/Halifax": "Canada",
+                    "America/Vancouver": "Canada",
+                    "America/Toronto": "Canada",
+                    "America/Mexico_City": "Mexico",
+                    "America/Sao_Paulo": "Brazil",
+                    "America/Buenos_Aires": "Argentina",
+                    "America/Lima": "Peru",
+                    "America/Santiago": "Chile",
+                    "Europe/Paris": "France",
+                    "Europe/Berlin": "Germany",
+                    "Europe/Madrid": "Spain",
+                    "Europe/Rome": "Italy",
+                    "Europe/Athens": "Greece",
+                    "Europe/Moscow": "Russia",
+                    "Europe/Istanbul": "Turkey",
+                    "Europe/Stockholm": "Sweden",
+                    "Europe/Oslo": "Norway",
+                    "Europe/Amsterdam": "Netherlands",
+                    "Europe/Zurich": "Switzerland",
+                    "Europe/Warsaw": "Poland",
+                    "Europe/Dublin": "Ireland",
+                    "Asia/Shanghai": "China",
+                    "Asia/Seoul": "South Korea",
+                    "Asia/Bangkok": "Thailand",
+                    "Asia/Singapore": "Singapore",
+                    "Asia/Hong_Kong": "China",
+                    "Asia/Kolkata": "India",
+                    "Asia/Jakarta": "Indonesia",
+                    "Asia/Dubai": "United Arab Emirates",
+                    "Asia/Manila": "Philippines",
+                    "Asia/Kuala_Lumpur": "Malaysia",
+                    "Asia/Riyadh": "Saudi Arabia",
+                    "Asia/Tehran": "Iran",
+                    "Asia/Karachi": "Pakistan",
+                    "Asia/Baghdad": "Iraq",
+                    "Asia/Damascus": "Syria",
+                    "Asia/Beirut": "Lebanon",
+                    "Australia/Sydney": "Australia",
+                    "Australia/Melbourne": "Australia",
+                    "Australia/Brisbane": "Australia",
+                    "Australia/Perth": "Australia",
+                    "Pacific/Auckland": "New Zealand",
+                    "Pacific/Honolulu": "United States",
+                    "Pacific/Fiji": "Fiji",
+                    "Pacific/Tahiti": "French Polynesia",
+                    "Africa/Cairo": "Egypt",
+                    "Africa/Johannesburg": "South Africa",
+                    "Africa/Lagos": "Nigeria",
+                    "Africa/Nairobi": "Kenya",
+                    "Africa/Casablanca": "Morocco",
+                    "Africa/Accra": "Ghana"
+                };
+                const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                function getCountryFromTimeZone(timeZone) {
+                    if (timeZoneToCountry[timeZone]) {
+                        const country = timeZoneToCountry[timeZone];
+                        document.getElementById('locationDisplay').innerText = `${country}`;
+                    } else {
+                        document.getElementById('locationDisplay').innerText = 'Unknown Country';
+                    }
+                }
+                getCountryFromTimeZone(timeZone); // Call the getCountryFromTimeZone() function and pass timeZone as an argument.
+            })
+            
+            // Function to get weather data from an external API
+            document.getElementById('getWeatherButton').addEventListener('click', function() {
+            fetch("https://api.open-meteo.com/v1/forecast?latitude=35.9132&longitude=-79.0558&current_weather=true")
             .then(response => response.json())
             .then(data => {
-                const weather = data.weather[0].description;
-                const temperature = (data.main.temp - 273.15).toFixed(2); // Convert from Kelvin to Celsius
-                document.getElementById('weatherDisplay').textContent = 
-                    `Weather: ${weather}, Temperature: ${temperature}°C`;
+                const currentTemp = data.current_weather.temperature;
+                document.getElementById("weatherDisplay").innerHTML = `Current Temperature: ${currentTemp}°C`;
             })
-            .catch(error => {
-                document.getElementById('weatherDisplay').textContent = "Unable to retrieve weather data.";
-            });
-        });
-    </script>
-</body>
+            .catch(error => console.error("Unable to retrieve weather data."));
+            })
+        </script>
+    </body>
+    <footer>
+        <small>Made by Shanshan Guo © 2024 Mood Processor. All rights reserved.</small>
+    </footer>
 </html>
