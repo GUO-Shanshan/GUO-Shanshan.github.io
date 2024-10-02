@@ -102,6 +102,7 @@
             </form>
         </main>
         <script>
+            // After click button, the current time comes out thru function and updates every second 
             document.getElementById('getTimeButton').addEventListener('click', function() {
                 function updateTime() {
                     const currentTime = new Date().toLocaleTimeString();
@@ -111,7 +112,7 @@
                 setInterval(updateTime, 1000);
             });
 
-            // here I use TimeZone to make sure where the user is
+            // Here I use TimeZone to ensure where the user is, the method inspired from this forum: https://stackoverflow.com/questions/3489460/how-to-get-visitors-location-i-e-country-using-geolocation
             document.getElementById('getLocationButton').addEventListener('click',function() {
                 const timeZoneToCountry = {
                     "America/New_York": "United States",
@@ -186,8 +187,9 @@
                 getCountryFromTimeZone(timeZone); // Call the getCountryFromTimeZone() function and pass timeZone as an argument.
             })
             
-            // Function to get weather data from an external API
-            document.getElementById('getWeatherButton').addEventListener('click', function() {
+            // Function to get weather data from an free external API but I can only get Chapel Hill weather
+            
+            /*document.getElementById('getWeatherButton').addEventListener('click', function() {
                 fetch("https://api.open-meteo.com/v1/forecast?latitude=35.9132&longitude=-79.0558&current_weather=true")
                 .then(response => response.json())
                 .then(data => {
@@ -195,7 +197,10 @@
                     document.getElementById("weatherDisplay").innerHTML = `Current Temperature: ${currentTemp}°C`;
                 })
             .catch(error => console.error("Unable to retrieve weather data."));
-            })
+            })*/
+           document.getElementById('getWeatherButton').addEventListener('click',function() {
+            window.open('https://www.google.com/search?q=what%27s+the+weather+for+today&rlz=1C5CHFA_enAU1080AU1080&oq=what%27s+the+weather+for+today&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzI0NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8', '_blank');
+           })
         </script>
     </body>
     <footer>
