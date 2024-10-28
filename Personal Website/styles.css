@@ -127,7 +127,7 @@ footer {
 }
 
 .button { 
-    align-self: center;
+    align-self: left;
     background-color: transparent; 
     background-image: none;
     background-position: 0 90%;
