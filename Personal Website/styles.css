@@ -12,6 +12,13 @@ h1 {
     color: aliceblue;
 }
 
+h2 {
+    font-size: 8em; 
+    transition: opacity 1s ease;
+    color: aliceblue;
+    
+}
+
 body {
     padding: 0;
     margin:0;
@@ -83,15 +90,30 @@ footer {
 
 /* This is second section -- my self-introduction */
 .container {
-    display: flex; /* 使用Flexbox布局 */
-    height: 100vh; /* 占满整个视口高度 */
-    z-index: 1;
+    display: flex; 
+    align-items: flex-start; 
+    width: 100%; 
 }
 
 .sidebar {
-    width:30%; /* 左侧按钮栏宽度 */
-    padding: 20px; /* 内边距 */
+    width: 30%;
+    padding: 20px; 
+    flex-shrink: 0; 
+}
 
+.content {
+    flex-grow: 1;
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 10px; 
+}
+
+.item {
+    text-align: left; 
+    color: white;
+    font-size: 1.2rem;
+    line-break: loose;
 }
 
 .button { 
@@ -137,20 +159,4 @@ footer {
 
 .button:hover {
     cursor: pointer; /* 鼠标悬停时显示为手指 */
-}
-
-.content {
-    position: relative;
-    z-index: 1;
-    display:flex;
-    flex-wrap: wrap;
-    align-content:space-around;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.item {
-    padding: 10px; 
-    text-align: left; 
-    /*border: 1px solid #ddd;*/
 }
