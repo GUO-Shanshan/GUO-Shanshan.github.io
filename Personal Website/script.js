@@ -1,7 +1,7 @@
 setTimeout(function() {
     const greetingElement = document.getElementById('greeting');
     greetingElement.innerHTML = 'This is Guo, Shanshan\'s personal website.';
-    greetingElement.style.fontSize = '6em'; 
+    greetingElement.style.fontSize = '8em'; 
 }, 1000);
 
 const hoverArea = document.getElementById('greeting');
@@ -24,18 +24,44 @@ const content = document.querySelector('.content');
 buttons[0].addEventListener('click', () => {
     content.innerHTML = `
         <div class="item">
-            <h3>Guo,Shanshan</h3>
-            <p>Hello there, my name is GUO Shanshan. I am currently in my final semester of the Master of Marketing Communications program at the University of Melbourne. This semester, I am on exchange at the University of North Carolina at Chapel Hill, where I am taking courses in Organizational Communication, Health Communication, Public Relations, and Interactive Media. I hold a Bachelor's degree in Public Relations from Donghua University and have gained valuable experience in public relations and resource management through various internships and projects. For instance, during my internship at MCM, I enhanced the brand's market recognition by collaborating with influencers and managing product samples efficiently. Leading a team in a national innovation competition further developed my leadership and problem-solving skills, resulting in a second-place finish.</p>
+            <h3>Guo, Shanshan</h3>
         </div>
         <div class="item">
-            <p>If you have any job opportunities available: I am a conscientious and responsible individual with a strong passion for the retail industry. My part-time roles in customer service and retail have allowed me to refine my product knowledge, inventory management skills, and teamwork abilities. Colleagues often commend my ability to foster a collaborative environment, and customers appreciate my approachable demeanor and clear communication style. I believe in the power of teamwork to overcome challenges and enhance the shopping experience. My dedication to connecting with both team members and customers, combined with proactive problem-solving skills, makes me a valuable addition to any team.</p>
+            Hello there, my name is Guo, Shanshan. I am currently in my final semester of <strong>the Master of Marketing Communications</strong> program at the University of Melbourne. This semester, I am on exchange at the University of North Carolina at Chapel Hill, where I am taking courses in Organizational Communications, Health Communications, Public Relations, and Interactive Media. I hold a <strong>Bachelor's degree in Public Relations</strong> from Donghua University and have gained valuable experience in public relations and resource management through various internships and projects. 
+        </div>
+        <div class="item">
+            For instance, during my internship at MCM, I enhanced the brand's market recognition by collaborating with influencers and managing product samples efficiently. Leading a team in a national innovation competition further developed my leadership and problem-solving skills, resulting in a second-place finish.
+        </div>
+        <div class="item">
+            <strong>If you have any job opportunities available</strong>: I am a conscientious and responsible individual with a strong passion for the retail industry. My part-time roles in customer service and retail have allowed me to refine my product knowledge, inventory management skills, and teamwork abilities. Colleagues often commend my ability to foster a collaborative environment, and customers appreciate my approachable demeanor and clear communication style. I believe in the power of teamwork to overcome challenges and enhance the shopping experience. My dedication to connecting with both team members and customers, combined with proactive problem-solving skills, makes me a valuable addition to any team.
         </div>
         <a href="ShanshanGUO_CV.pdf" target="_blank" class="button">Download My Resume</a>
     `;
 });
 
-// Update content for the second button
+// Update content for the third button
 buttons[1].addEventListener('click', () => {
+    content.innerHTML = `
+        <div class="content rock-salt-regular">
+            <div class="keywords">Bachelor of management in Public Relations</div>
+            <div class="keywords">Master of Marketing Communications</div>
+            <div class="keywords">Public Relations and Marketing Expertise</div>
+            <div class="keywords">Multilingual Communication</div>
+            <div class="keywords">Diligent Researcher and Analyst</div>
+            <div class="keywords">Project Management</div>
+            <div class="keywords">Digital Savvy</div>
+            <div class="keywords">Adaptable Communicator</div>
+            <div class="keywords">Creative Problem Solver</div>
+            <div class="keywords">Continuous Learner</div>
+            <div class="keywords">Effective Organizer</div>
+            <div class="keywords">Team Collaborator</div>
+            <div class="keywords">Strategic Thinker</div>
+        </div><br><br><br><br>
+    `
+});
+
+// Update content for the second button
+buttons[2].addEventListener('click', () => {
     content.innerHTML = `
         <div class="item">
             <h3>PR Intern, MCM (Modern Creation München), Shanghai</h3>
@@ -78,6 +104,6 @@ buttons[1].addEventListener('click', () => {
 
 
 // Update content for the third button
-buttons[2].addEventListener('click', () => {
-    content.innerHTML = '<h2>Contact Me ↘</h2>';
+buttons[3].addEventListener('click', () => {
+    content.innerHTML = '<h2>Contact Me ↘</h2> <ul><li class="item">My personal email address: <strong>shanshanguo1010@gmail.com</strong></li><li class="item">If you\'re in China, please contact me through this email address: <strong>guoshanshan_yx@163.com</strong></li><li class="item">Or you can click the bottom right emoji.</li></ul><br><br><br><br><br>';
 });

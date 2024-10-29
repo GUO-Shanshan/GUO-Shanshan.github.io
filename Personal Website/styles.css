@@ -16,7 +16,9 @@ h2 {
     font-size: 8em; 
     transition: opacity 1s ease;
     color: aliceblue;
-    margin-bottom: 30%;
+}
+h3 {
+    color: aliceblue;
 }
 
 body {
@@ -27,7 +29,18 @@ body {
     background-position:center;
     background-size: 100%;
     background-attachment:fixed;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }  
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: -1; /* 'z-index' has to use together with 'position' */
+}
 
 footer {
     position:fixed;
@@ -45,19 +58,22 @@ footer {
     transform: translate(-50%, -50%);
     z-index: 2;
     font-size: 500%; 
-    transition: font-size 0.3s ease; 
+}
+
+@keyframes zoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 .control_box a {
     color: inherit; 
     text-decoration: none; 
     display: inline-block;
-    transition: transform 0.3s ease; 
-}
-
-.control_box a:hover,
-.control_box a:focus {
-    transform: scale(1.2);
+    animation: zoom 2s infinite;
 }
 
 /* tooltip box */
@@ -77,22 +93,16 @@ footer {
 }
 
 /* font */
-.tajawal-regular {
-    font-family: "Tajawal", sans-serif;
+.rock-salt-regular {
+    font-family: "Rock Salt", serif;
     font-weight: 400;
     font-style: normal;
-}
-.tajawal-black {
-    font-family: "Tajawal", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-}
+}  
 
 /* This is second section -- my self-introduction */
 .container {
     display: flex; 
-    align-items: flex-start; 
-    width: 100%; 
+    align-content:space-around;
 }
 
 .sidebar {
@@ -102,9 +112,9 @@ footer {
 }
 
 .content {
-    flex-grow: 1;
     display: flex; 
     flex-wrap: wrap; 
+    align-content:space-around;
     gap: 20px; 
     padding: 10px; 
 }
@@ -112,18 +122,39 @@ footer {
 .item {
     text-align: left; 
     color: white;
-    font-size: 1.2rem;
-    line-break: loose;
-    margin-right: 10px;
-    padding: 10px;
-    line-height: 1.5;
+    font-size: 1.4rem;
+    margin-right: 20px;
+    padding: 10px 20px;
+    line-height: 1.6;
 }
 
 .item:hover {
-    background-color: rgba(236, 250, 227, 0.508);
+    background-color: rgba(236, 250, 227, 0.26);
     transform: scale(1.03);
     transition: transform 0.3s, box-shadow 0.3s;
     margin-right: 10px;
+}
+
+.keywords {
+    color: black;
+    font-size: 1.5rem;
+    width: max-content; /* 根据图片大小自动调整容器宽度 */
+    padding: 10px; 
+    margin: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5); 
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+    display: inline-block; /* 使div适应内容大小 */
+}
+
+.keywords:hover {
+    background-color: rgba(236, 250, 227, 0);
+    transform: scale(1.03);
+    transition: transform 0.3s, box-shadow 0s;
+    border-radius: 15px;
+    color: white;
+    box-shadow: none;
 }
 
 .button { 
@@ -168,5 +199,5 @@ footer {
 } 
 
 .button:hover {
-    cursor: pointer; /* 鼠标悬停时显示为手指 */
+    cursor: pointer;
 }
