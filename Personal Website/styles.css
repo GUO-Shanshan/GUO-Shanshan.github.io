@@ -289,7 +289,7 @@ form > div {
         right: 10px;
         transform: translateY(-50%);
         z-index: 5;
-        font-size: clamp(1rem, 9vh, 3rem);
+        font-size: clamp(1rem, 9vh, 2rem);
     }
 }
 
