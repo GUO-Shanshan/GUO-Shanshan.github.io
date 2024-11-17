@@ -124,11 +124,11 @@ footer {
 /* This is linked emoji */
 .control_box {
     position: fixed;
-    top: 50%; /* 垂直居中 */
-    right: 5%; /* 距离页面右边 5% */
-    transform: translateY(-50%); /* 使元素垂直方向完全居中 */
+    top: 50%;
+    right: 3%; 
+    transform: translateY(-50%);
     z-index: 5;
-    font-size: clamp(1rem, 8vh, 9rem);  
+    font-size: clamp(1rem, 9vh, 9rem);  
 }
 
 @keyframes zoom {
@@ -278,6 +278,14 @@ form > div {
         text-align: center;
         max-width: 100vw;
         margin-bottom: 5vh;
+    }
+    .control_box {
+        position: fixed;
+        top: 50%;
+        left: calc(100% - 5px);
+        transform: translateY(-50%);
+        z-index: 5;
+        font-size: clamp(1rem, 9vh, 9rem);  
     }
 }
 
