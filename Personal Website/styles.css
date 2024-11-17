@@ -1,5 +1,10 @@
+* {
+    box-sizing: border-box; 
+}
+
 body {
     padding: 0;
+    margin: 0;
     background-color: rgb(244, 244, 244);
     /* background-image: url('images/image1.png');
     background-repeat: repeat;
@@ -8,12 +13,14 @@ body {
     background-attachment:fixed;*/
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 100vw;
+    overflow-x: hidden;
 }  
 
 .container {
     display: flex;
     flex-direction: column; 
     gap: 10px;
+    margin: 0;
 }
 
 .first-box {
@@ -128,7 +135,7 @@ footer {
     right: 3%; 
     transform: translateY(-50%);
     z-index: 5;
-    font-size: clamp(1rem, 9vh, 9rem);  
+    font-size: clamp(1rem, 5vw, 9rem);  
 }
 
 @keyframes zoom {
@@ -279,10 +286,10 @@ form > div {
     .control_box {
         position: fixed;
         top: 50%;
-        left:5px;
+        right: 10px;
         transform: translateY(-50%);
         z-index: 5;
-        font-size: clamp(1rem, 9vh, 9rem);  
+        font-size: clamp(1rem, 9vh, 5rem);
     }
 }
 
