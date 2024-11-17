@@ -218,7 +218,7 @@ footer {
 
 .keywords {
     color: black;
-    font-size: cramp(1rem,1.1vw,1.3rem);
+    font-size: cramp(1rem,1vw,1.3rem);
     padding: 10px; 
     margin: 5px;
     border-radius: 15px;
