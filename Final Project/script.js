@@ -1,7 +1,7 @@
 setTimeout(function() {
     const greetingElement = document.getElementById('greeting');
     greetingElement.innerHTML = 'This is Guo, Shanshan\'s personal website.';
-    greetingElement.style.fontSize = 'clamp(2rem, 10vw, 9rem)'; 
+    greetingElement.style.fontSize = '8em'; 
 }, 1000);
 
 const hoverArea = document.getElementById('greeting');
@@ -17,13 +17,15 @@ hoverArea.addEventListener('mouseleave', () => {
     tooltip.style.display = 'none'; 
 });
 
-/*
 const buttons = document.querySelectorAll('.button');
 const content = document.querySelector('.content');
 
 // Update content for the first button
 buttons[0].addEventListener('click', () => {
     content.innerHTML = `
+        <div class="item">
+            <h3>Guo, Shanshan</h3>
+        </div>
         <div class="item">
             Hello there, my name is Guo, Shanshan. I am currently in my final semester of <strong>the Master of Marketing Communications</strong> program at the University of Melbourne. This semester, I am on exchange at the University of North Carolina at Chapel Hill, where I am taking courses in Organizational Communications, Health Communications, Public Relations, and Interactive Media. I hold a <strong>Bachelor's degree in Public Relations</strong> from Donghua University and have gained valuable experience in public relations and resource management through various internships and projects. 
         </div>
@@ -37,7 +39,7 @@ buttons[0].addEventListener('click', () => {
     `;
 });
 
-// Update content for the second button
+// Update content for the third button
 buttons[1].addEventListener('click', () => {
     content.innerHTML = `
         <div class="content rock-salt-regular">
@@ -58,7 +60,7 @@ buttons[1].addEventListener('click', () => {
     `
 });
 
-// Update content for the third button
+// Update content for the second button
 buttons[2].addEventListener('click', () => {
     content.innerHTML = `
         <div class="item">
@@ -101,46 +103,7 @@ buttons[2].addEventListener('click', () => {
 });
 
 
-// Update content for the fourth button
+// Update content for the third button
 buttons[3].addEventListener('click', () => {
-    content.innerHTML = `
-        <section>
-            <h3>Job Opportunity Contact Form</h3>
-            <p>If you have a job opportunity for me, please fill out the form below, and I will get back to you as soon as possible.</p>
-            <form action="/submit-opportunity" method="post">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="company">Company Name:</label>
-                    <input type="text" id="company" name="company">
-                </div>
-                <div>
-                    <label for="position">Position:</label>
-                    <input type="text" id="position" name="position">
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                <div>
-                    <label for="description">Job Opportunity Description:</label><br>
-                    <textarea id="description" name="description" rows="4" cols="50" required></textarea>
-                </div>
-                <div>
-                    <label for="notes">Additional Notes:</label><br>
-                    <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
-                </div>
-                <div>
-                    <input type="submit" value="Submit" class="button">
-                </div>
-            </form>
-        </section>
-    `;
+    content.innerHTML = '<h2>Contact Me ↘</h2> <ul><li class="item">My personal email address: <strong>shanshanguo1010@gmail.com</strong></li><li class="item">If you\'re in China, please contact me through this email address: <strong>guoshanshan_yx@163.com</strong></li><li class="item">Or you can click the bottom right emoji.</li></ul><br><br><br><br><br>';
 });
-*/
