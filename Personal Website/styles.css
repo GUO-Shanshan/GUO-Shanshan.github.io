@@ -280,7 +280,7 @@ form > div {
     .control_box {
         position: fixed;
         top: 50%;
-        left: calc(100% - 5px);
+        right: 5%;        
         transform: translateY(-50%);
         z-index: 5;
         font-size: clamp(1rem, 9vh, 9rem);  
