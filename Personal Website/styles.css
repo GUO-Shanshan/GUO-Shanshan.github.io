@@ -20,7 +20,6 @@ body {
     align-self: stretch;
     height: 100vh;
     width: 100%;
-    max-width: 100vw;
     text-align: left;
     display: flex;
     align-items: center;
@@ -280,7 +279,7 @@ form > div {
     .control_box {
         position: fixed;
         top: 50%;
-        right: 5%;        
+        left:5px;
         transform: translateY(-50%);
         z-index: 5;
         font-size: clamp(1rem, 9vh, 9rem);  
