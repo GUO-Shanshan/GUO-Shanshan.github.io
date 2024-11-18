@@ -3,41 +3,121 @@
     <head>
         <title>Explore China</title>
         <meta charset="utf-8">
-        <meta name="description" content="Hello, my name is GUO Shanshan, really nice to meet you here!">
+        <meta name="description" content="Discover the wonders of China! Explore iconic landmarks, rich cultural heritage, and essential travel tips to make your visit unforgettable. Start your China adventure now!">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css"> 
     </head>
 
     <body>
+        <nav class="navbar">
+            <!-- 左侧部分 -->
+            <div class="navbar-left">
+                <span class="brand">DISCOVER CHINA</span>
+            </div>
+            <!-- 中间部分 -->
+            <ul class="navbar-center">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#where-to-go">Where&nbsp;to&nbsp;go</a></li>
+                <li><a href="#what-to-do">What&nbsp;to&nbsp;do</a></li>
+                <li><a href="#plan-your-trip">Plan&nbsp;your&nbsp;trip</a></li>
+                <li class="dropdown">
+                    <a href="#information" class="dropdown-toggle">Information</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#visa-info">Visa Information</a></li>
+                        <li><a href="#stay-with-us">Stay with us</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- 右侧部分 -->
+            <div class="navbar-right">
+                <a href="#search" class="icon">
+                    <img src="images/search.png" alt="search" class="icon">
+                </a>
+                <a href="#favourites" class="icon">
+                    <img src="images/heart.png" alt="collect" class="icon">
+                </a>
+                <a href="#sign-in" class="icon log-in">
+                    Log in
+                </a>
+                <div class="language">
+                    <span class="language-toggle">
+                        EN
+                    </span>
+                    <div class="language-dropdown">
+                        <a href="#english">🇬🇧 English</a>
+                        <a href="#italiano">🇮🇹 Italiano</a>
+                        <a href="#espanol">🇪🇸 Español</a>
+                    </div>
+                </div>
+            </div>            
+        </nav>
+        
         <header>
-            <h1 id="greeting" class="hover-area">HELLO!</h1>
-            <div class="tooltip tajawal-regular" id="tooltip">Please scroll down!</div>
+            <div class="hero-slider">
+                <div class="slider-item">
+                    <img src="images/marc-olivier-jodoin-uqmOB8z9YvM-unsplash.jpg" alt="Shanghai cityscape, Shanghai" class="hero-media">
+                    <div class="overlay">
+                        <p>Discover the Beauty of China</p>
+                    </div>
+                    <!--<video autoplay muted loop class="hero-media">
+                        <source src="images/chineseculturevideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>-->
+                </div>
+                <div class="slider-item">
+                    <img src="images/forbiddencity.jpg" alt="Forbiddencity, Beijing" class="hero-media">
+                </div>
+                <div class="slider-item">
+                    <img src="images/cctvheadquarters.jpg" alt="CCTV headquarters, Beijing" class="hero-media">
+                </div>
+                <div class="slider-item">
+                    <img src="images/lijianggucheng.jpg" alt="Many small bars line the hill in Lijiang old town. Each offers a great view of the historic rooftops while offering hot tea or cold beer, we went with a cold beer." class="hero-media">
+                </div>
+                <div class="slider-item">
+                    <img src="images/fenghuanggucheng.jpg" alt="Fenghuang, Yunnan" class="hero-media">
+                </div>
+                <div class="slider-item">
+                    <img src="images/the_great_wall.jpg" alt="The Great Wall" class="hero-media">
+                </div>
+                <div class="slider-item">
+                    <img src="images/max-van-den-oetelaar-rFC0pueaf9U-unsplash.jpg" alt="The Great Wall in Winter" class="hero-media">
+                </div>
+                <div class="slider-item">
+                    <img src="images/guilin.jpg" alt="Guilin landscape, Guangxi" class="hero-media">
+                </div>
+                <div class="slider-item">
+                    <img src="images/village.jpg" alt="Villagescape" class="hero-media">
+                </div>
+                <div class="slider-item">
+                    <img src="images/tianlei-sun-577IVs0I2oA-unsplash.jpg" alt="Winterscape in Changchun" class="hero-media">
+                </div>
+                <div class="slider-item">
+                    <img src="images/christian-lue-gcYc4p3B1lg-unsplash.jpg" alt="Young students playing basketball during night no campus of university of Beijing, Peking, China" class="hero-media">
+                </div>                <div class="slider-item">
+                    <img src="images/ryan-mac-kCABKZBt4Gk-unsplash.jpg" alt="Victoria Peak, HongKong" class="hero-media">
+                </div>                <div class="slider-item">
+                    <img src="images/himmel-s-Jo_LHMXpOR0-unsplash.jpg" alt="The Bund of Shanghai" class="hero-media">
+                </div>
+            </div>            
         </header>
 
-        <main class="container">
-            <div class="sidebar">
-                <button class="button">About ME</button>
-                <button class="button">Key Words on ME</button>
-                <button class="button">View My Experience</button>
-                <button class="button">Contact ME</button>
-            </div>
+        <main class="eb-garamond-400">
             <div class="content">
                 <div class="item">
-                    <h3>Guo, Shanshan</h3>
+                    Hello there, my name is Guo, Shanshan. I am currently in my final semester of <strong>the Master of Marketing Communications</strong> program at the University of Melbourne. This semester, I am on exchange at the University of North Carolina at Chapel Hill, where I am taking courses in Organizational Communications, Health Communications, Public Relations, and Interactive Media. I hold a <strong>Bachelor's degree in Public Relations</strong> from Donghua University and have gained valuable experience in public relations and resource management through various internships and projects.
                 </div>
                 <div class="item">
                     Hello there, my name is Guo, Shanshan. I am currently in my final semester of <strong>the Master of Marketing Communications</strong> program at the University of Melbourne. This semester, I am on exchange at the University of North Carolina at Chapel Hill, where I am taking courses in Organizational Communications, Health Communications, Public Relations, and Interactive Media. I hold a <strong>Bachelor's degree in Public Relations</strong> from Donghua University and have gained valuable experience in public relations and resource management through various internships and projects.
                 </div>
-                <div class="item">    
-                    For instance, during my internship at MCM, I enhanced the brand's market recognition by collaborating with influencers and managing product samples efficiently. Leading a team in a national innovation competition further developed my leadership and problem-solving skills, resulting in a second-place finish.
+                <div class="item">
+                    Hello there, my name is Guo, Shanshan. I am currently in my final semester of <strong>the Master of Marketing Communications</strong> program at the University of Melbourne. This semester, I am on exchange at the University of North Carolina at Chapel Hill, where I am taking courses in Organizational Communications, Health Communications, Public Relations, and Interactive Media. I hold a <strong>Bachelor's degree in Public Relations</strong> from Donghua University and have gained valuable experience in public relations and resource management through various internships and projects.
                 </div>
                 <div class="item">
-                    <strong>If you have any job opportunities available</strong>: I am a conscientious and responsible individual with a strong passion for the retail industry. My part-time roles in customer service and retail have allowed me to refine my product knowledge, inventory management skills, and teamwork abilities. Colleagues often commend my ability to foster a collaborative environment, and customers appreciate my approachable demeanor and clear communication style. I believe in the power of teamwork to overcome challenges and enhance the shopping experience. My dedication to connecting with both team members and customers, combined with proactive problem-solving skills, makes me a valuable addition to any team.
-                </div><br>
-                <a href="ShanshanGUO_CV.pdf" target="_blank" class="button">Download My Resume</a><br><br>
+                    Hello there, my name is Guo, Shanshan. I am currently in my final semester of <strong>the Master of Marketing Communications</strong> program at the University of Melbourne. This semester, I am on exchange at the University of North Carolina at Chapel Hill, where I am taking courses in Organizational Communications, Health Communications, Public Relations, and Interactive Media. I hold a <strong>Bachelor's degree in Public Relations</strong> from Donghua University and have gained valuable experience in public relations and resource management through various internships and projects.
+                </div>
             </div>
         </main>
 
