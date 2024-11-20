@@ -29,7 +29,49 @@ function goToSlide(index) {
 // 自动切换每5秒
 setInterval(() => {
     goToSlide(currentIndex + 1);
-}, 5000);
+}, 4000);
 
 // 初始显示第一个滑块
 sliderItems[0].classList.add('active');
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 获取所有的 <path> 元素
+    const paths = document.querySelectorAll('#china-map path');
+
+    // 遍历每一个 <path> 元素
+    paths.forEach((path) => {
+        // 为每个省份路径添加点击事件监听器
+        path.addEventListener('click', function() {
+            const provinceId = path.id; // 获取路径的 id
+
+            // 根据 id 进行页面跳转或显示特定信息
+            navigateToProvincePage(provinceId);
+        });
+
+        // 可选：添加鼠标悬停效果
+        path.addEventListener('mouseover', function() {
+            path.style.fill = '#ccc';  // 鼠标悬停时改变填充颜色
+        });
+
+        path.addEventListener('mouseout', function() {
+            path.style.fill = '#eee';  // 鼠标离开时还原填充颜色
+        });
+    });
+
+    // 根据省份 ID 进行跳转的函数
+    function navigateToProvincePage(provinceId) {
+        switch (provinceId) {
+            case 'beijing':
+                window.open('https://english.visitbeijing.com.cn/', '_blank');
+                break;
+            case 'shanghai':
+                window.open('https://english.shanghai.gov.cn/en-TravelinShanghai/index.html', '_blank');
+                break;
+            // 添加更多省份对应的链接
+            default:
+                alert('This province is under construction.');
+        }
+    }    
+});
