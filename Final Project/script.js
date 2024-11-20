@@ -75,3 +75,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }    
 });
+
+function navigateToRegion(region) {
+    switch (region) {
+        case 'shanghai':
+            window.location.href = 'https://english.shanghai.gov.cn/en-TravelinShanghai/index.html';
+            break;
+        case 'beijing':
+            window.location.href = 'https://english.visitbeijing.com.cn/';
+            break;
+        case 'guangzhou':
+            window.location.href = 'https://www.travelguangzhou.cn/';
+            break;
+        case 'chengdu':
+            window.location.href = 'https://www.gochengdu.cn/';
+            break;
+        case 'shenzhen':
+            window.location.href = 'https://www.shenzhen.gov.cn/en/';
+            break;
+        case 'hangzhou':
+            window.location.href = 'https://en.gotohz.com/';
+            break;
+        default:
+            alert('More regions coming soon!');
+    }
+}
+
+
+
