@@ -16,21 +16,29 @@
             <!-- 左侧部分 -->
             <div class="navbar-left">
                 <span class="brand">DISCOVER CHINA</span>
+
+                <!-- 汉堡菜单图标（小屏幕使用） -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    ☰ <!-- 这个符号表示汉堡图标 -->
+                </div>
             </div>
+        
             <!-- 中间部分 -->
-            <ul class="navbar-center">
-                <li><a href="#home">Home</a></li>
+            <ul class="navbar-center" id="navbar-center">
+                <li><a href="">Home</a></li>
                 <li><a href="#where-to-go">Where&nbsp;to&nbsp;go</a></li>
+                <li><a href="#how-to-plan">How&nbsp;to&nbsp;plan</a></li>
                 <li><a href="#what-to-do">What&nbsp;to&nbsp;do</a></li>
-                <li><a href="#plan-your-trip">How&nbsp;to&nbsp;plan</a></li>
+                
                 <li class="dropdown">
                     <a href="#information" class="dropdown-toggle">Information</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#visa-info">Visa Information</a></li>
-                        <li><a href="#stay-with-us">Stay with us</a></li>
+                        <li><a href="#visa-info">Visa&nbsp;Information</a></li>
+                        <li><a href="#stay-with-us">Stay&nbsp;with&nbsp;Us</a></li>
                     </ul>
                 </li>
-            </ul>
+            </ul>       
+            
             <!-- 右侧部分 -->
             <div class="navbar-right">
                 <a href="#search" class="icon">
@@ -47,12 +55,13 @@
                         EN
                     </span>
                     <div class="language-dropdown">
-                        <a href="#english">🇬🇧 English</a>
-                        <a href="#italiano">🇮🇹 Italiano</a>
-                        <a href="#espanol">🇪🇸 Español</a>
+                        <a id="en-lang" href="javascript:void(0);">English</a>
+                        <a id="cn-lang" href="javascript:void(0);">中文</a>
+                        <a href="#italiano">Italiano</a>
+                        <a href="#espanol">Español</a>
                     </div>
                 </div>
-            </div>            
+            </div>             
         </nav>
         
         <header>
@@ -155,7 +164,7 @@
             </div>            
         </header>
 
-        <main class="eb-garamond-400">
+        <main class="eb-garamond-400" id="where-to-go">
             <div id="china-map-container" class="content">
                 <h2 class="hollow-text ">Destinations</h2>
                 <svg id="china-map" xmlns="http://www.w3.org/2000/svg" class="leaflet-zoom-animated" width="100%" height="100%" viewBox="100 100 700 350" preserveAspectRatio="xMidYMid meet" style="margin: 0; padding: 0;">                    
@@ -271,42 +280,246 @@
                     <path id="macau_special_administrative_region" class="leaflet-interactive" stroke="#8B908F" stroke-opacity="0.5" stroke-width="1" stroke-linecap="butt" stroke-linejoin="bevel" fill="#eee" fill-opacity="0.5" fill-rule="evenodd" d="M507 371L507 371z" />                   
                 </svg>
             </div>
-            <div>
-                <h2>Events Recently</h2>
-                <div class="container">
-                    <div class="grid">
-                        <div class="card" onclick="navigateToRegion('shanghai')">
-                            <img src="shanghai.jpg" alt="Shanghai" class="photo">
-                            <div class="caption">Shanghai: Explore the Latest Events</div>
+
+            <div class="container" id="how-to-plan">
+                <h2>Tips I Need to Know</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-title eb-garamond-400">Visa Requirements</button>
+                        <div class="accordion-content">
+                            <p>Foreign visitors typically need a visa to enter China. Ensure you apply for the appropriate type of visa (e.g., tourist, business) well in advance of your travel dates.</p>
+                            <a href="https://www.visaforchina.org/" target="_blank">Learn More</a>
                         </div>
-                        <div class="card" onclick="navigateToRegion('beijing')">
-                            <img src="beijing.jpg" alt="Beijing" class="photo">
-                            <div class="caption"><h3>Beijing</h3><br>
-                                Discover the Forbidden City, the center of China's imperial past. Once home to emperors, this palace complex reflects centuries of culture and tradition.</div>
-                        </div>
-                        <div class="card" onclick="navigateToRegion('guangzhou')">
-                            <img src="guangzhou.jpg" alt="Guangzhou" class="photo">
-                            <div class="caption">Guangzhou: Experience the Festival</div>
-                        </div>
-                        <div class="card" onclick="navigateToRegion('chengdu')">
-                            <img src="chengdu.jpg" alt="Chengdu" class="photo">
-                            <div class="caption">Chengdu: Food and Fun</div>
-                        </div>
-                        <div class="card" onclick="navigateToRegion('shenzhen')">
-                            <img src="shenzhen.jpg" alt="Shenzhen" class="photo">
-                            <div class="caption">Shenzhen: Tech Events</div>
-                        </div>
-                        <div class="card" onclick="navigateToRegion('hangzhou')">
-                            <img src="hangzhou.jpg" alt="Hangzhou" class="photo">
-                            <div class="caption">Hangzhou: Scenic and Events</div>
-                        </div>
-                        <!-- 添加更多格子 -->
                     </div>
+                    <div class="accordion-item">
+                        <button class="accordion-title eb-garamond-400">Payment methods in China</button>
+                        <div class="accordion-content">
+                            <p>The official currency in China is the Renminbi (RMB), also known as the yuan (¥). It's recommended to have some cash for small purchases, although mobile payments like Alipay and WeChat Pay are widely used.</p>
+                            <ul>
+                                <li><strong>Digital Payment: Alipay, WeChat Pay (or Weixin in Chinese)</strong>
+                                    <div class="payment-images">
+                                        <img src="images/alipay-svgrepo-com.png" alt="Alipay" class="payment-logo">
+                                        <img src="images/wechat-logo-svgrepo-com.png" alt="WeChat Pay" class="payment-logo">
+                                    </div>
+                                    <ul>
+                                        <li>These are the two most popular mobile payment methods in China.</li>
+                                        <li>They work through apps that allow users to link their bank accounts and make payments by scanning QR codes.</li>
+                                        <li>They are accepted nearly everywhere—from street vendors to large department stores.</li>
+                                        <li>Foreign visitors can now use Alipay and WeChat Pay by linking their international credit or debit cards.</li>
+                                        <li>
+                                            <a href="https://english.shanghai.gov.cn/en-UsefulApps/20240312/f2968c5dcb2d41c895643afa9219ce89.html" target="_blank"><b>Alipay:</b></a>
+                                            <ul>
+                                                <li>Alipay is a payment platform similar to PayPal, but much more versatile.</li>
+                                                <li>It allows users to pay for almost anything, from online shopping to in-store purchases.</li>
+                                                <li>Alipay also integrates a wide range of services, including many "mini programs" from Alibaba's ecosystem, enabling you to book tickets, hail a taxi, pay utility bills, and much more—all within one app.</li>
+                                            </ul>                                          
+                                        </li>
+                                        <li>
+                                            <a href="https://walkthechat.com/wechat-payment-5-reasons-tencent-might-kill-alipay/" target="_blank"><b>WeChat Pay (Weixin Pay):</b></a>
+                                            <ul>
+                                                <li>WeChat Pay is part of WeChat, which is a very popular messaging and social media app in China, similar to WhatsApp or Telegram. </li>
+                                                <li>Besides messaging, WeChat has many other features, including payment services.</li>
+                                                <li>WeChat Pay is embedded directly into the WeChat app, allowing users to send money to friends, pay for goods and services, and even order food or book a ride—all in a single, user-friendly app.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>UnionPay</strong>
+                                    <div class="payment-images">
+                                        <img src="images/unionpay.png" alt="UnionPay" class="payment-logo">
+                                    </div>
+                                    <ul>
+                                        <li>UnionPay is China’s domestic card network, similar to Visa or Mastercard.</li>
+                                        <li>It is accepted almost universally within China.</li>
+                                        <li>Many ATMs also support UnionPay, making it easy for visitors to withdraw cash.</li>
+                                        <li>Foreign cards with the UnionPay logo are also commonly accepted.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>International Mobile Payment: Apple Pay, Samsung Pay</strong>
+                                    <div class="payment-images">
+                                        <img src="images/apple-pay-svgrepo-com.png" alt="Apple Pay" class="payment-logo">
+                                        <img src="images/SamsungPay-Logo.png" alt="Samsung Pay" class="payment-logo">
+                                    </div>
+                                    <ul>
+                                        <li>Apple Pay and Samsung Pay can be used in some parts of China, mostly in international chains and major retailers.</li>
+                                        <li>However, they are not as widely accepted as Alipay or WeChat Pay, so it’s best to check with the specific store.</li>
+                                        <li>They work just like Alipay and WeChat Pay but rely on NFC terminals instead of QR codes.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Credit Cards</strong>
+                                    <ul>
+                                        <li>Major credit cards like Visa, Mastercard, and American Express are accepted in high-end hotels, major restaurants, and large shopping malls.</li>
+                                        <li>However, small vendors and rural areas may not accept them, so it’s wise to carry some cash or have access to a digital payment method.</li>
+                                        <li>Note that sometimes, international credit cards can incur a service fee.</li>
+                                    </ul>
+                                </li>
+                                <!--
+                                Alipay 和 WeChat Pay 是最广泛使用的支付手段，通过手机应用程序支付，几乎可以在中国的任何商店、市场甚至路边摊使用。
+                                UnionPay 是中国国内的银行卡网络，支持绝大多数的支付场景，并且很多 ATM 也支持 UnionPay 取款。
+                                Apple Pay 和 Samsung Pay 在一些国际品牌的商店和大型零售商中也可以使用，但接受度不如 Alipay 和 WeChat Pay 广泛。
+                                信用卡（Visa, Mastercard, American Express 等）虽然在大城市的高端酒店和购物中心很常见，但在小商铺或农村地区不一定适用，因此备有现金或数字支付手段更为方便。-->
+                            </ul>
+                            <a href="https://english.shanghai.gov.cn/en-PaymentMethods/20240313/6f4e58272f1a4cea9aec59c518915bdf.html" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-title eb-garamond-400">Language</button>
+                        <div class="accordion-content">
+                            <p>Mandarin Chinese is the official language. English is spoken in major cities, but having a translation app or phrasebook can be very helpful in more remote areas.</p>
+                            <a href="https://www.google.com/intl/en_ALL/translate/" target="_blank">Translation App</a>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-title eb-garamond-400">Weather and Climate</button>
+                        <div class="accordion-content">
+                            <p>China is a vast country with diverse climates. Check the weather for your destination and pack accordingly. Summers can be hot and humid, while winters in the north are freezing.</p>
+                            <a href="https://weather.com/" target="_blank">Weather Info</a>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-title eb-garamond-400">Transportation</button>
+                        <div class="accordion-content">
+                            <p>China has an extensive public transportation network, including high-speed trains, subways, and buses. Ride-hailing apps like Didi are widely used for local travel.</p>
+                            <a href="https://www.chinahighlights.com/china-trains/" target="_blank">Train Travel Guide</a>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-title eb-garamond-400">Health and Safety</button>
+                        <div class="accordion-content">
+                            <p>Tap water is not safe to drink in most parts of China. Bottled water is widely available. Ensure you have travel insurance and check for any required vaccinations before your trip.</p>
+                        </div>
+                    </div>
+                </div>   
             </div>
+
+            <div class="content">
+                <h2>Things I Can Do</h2>
+                <h3>Dynasty Tours</h3>
+                <div class="grid1">
+                    <div class="card">
+                        <img id="timelineImage" src="images/Timeline_of_Chinese_History.jpg" alt="Timeline of Chinese History" class="photo" style="cursor: pointer;">
+                        <div class="caption">
+                            <h4>Discover the entire span of Chinese history from Xia to the People's Republic of China.</h4>
+                            <p class="attribution">
+                                Image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Timeline_of_Chinese_History.jpg" target="_blank">SS</a>, 
+                                licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>, via Wikimedia Commons.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="imgInModal">
+                    <div id="caption" class="caption"></div>
+                </div>    
+                
+                <h3>Food Adventures</h3>
+                <div class="grid">
+                    <div class="card">
+                        <img src="images/chuanfood.jpg" alt="Chengdu Food Street" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://www.travelchina.org.cn/sitefiles/gjly_zh/html/tourchina/6105.shtml" target="_blank">Chengdu Food Street</a></h4>
+                            <p>Enjoy spicy Sichuan cuisine in the heart of Chengdu, famous for its bold flavors and fiery spices.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/yumcha.jpg" alt="Dim Sum in Guangzhou" class="photo">
+                        <div class="caption">
+                            <h4><a href="http://www.eguangzhou.gov.cn/" target="_blank">Dim Sum in Guangzhou</a></h4>
+                            <p>Explore the world of dim sum in Guangzhou, the birthplace of Cantonese cuisine and yum cha culture.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Architectural Wonders</h3>
+                <div class="grid">
+                    <div class="card">
+                        <img src="images/greatwall.jpg" alt="Great Wall of China" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://www.mutianyugreatwall.com/" target="_blank">Great Wall of China</a></h4>
+                            <p>Walk along the ancient Great Wall, one of the greatest architectural achievements in human history.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/forbiddencity.jpg" alt="Forbidden City" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://en.dpm.org.cn/" target="_blank">Forbidden City</a></h4>
+                            <p>Discover the imperial palace that served as the home of Chinese emperors for over 500 years.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Familiar History and Figures</h3>
+                <div class="grid">
+                    <div class="card">
+                        <img src="images/silkroad.jpg" alt="Silk Road" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://www.travelchinaguide.com/silk-road/" target="_blank">Silk Road</a></h4>
+                            <p>Trace the historic Silk Road, the ancient trade route that connected China with Europe and the Middle East.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/opiumwar.jpg" alt="Opium War Museum" class="photo">
+                        <div class="caption">
+                            <h4><a href="http://www.opiumwarmuseum.cn/en/" target="_blank">Opium War Museum</a></h4>
+                            <p>Learn about the events of the Opium War and its impact on China's modern history.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Explore Cultural Treasures</h3>
+                <div class="grid">
+                    <div class="card">
+                        <img src="images/chnmuseum.jpg" alt="National Museum of China" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://en.chnmuseum.cn/" target="_blank">National Museum of China</a></h4>
+                            <p>Discover China's rich history through its vast collection of artifacts and historical exhibits.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/sxhm.jpg" alt="Shaanxi History Museum" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://www.sxhm.com/en/index.html" target="_blank">Shaanxi History Museum</a></h4>
+                            <p>......</p>
+                        </div>
+                    </div>                   
+                    <div class="card">
+                        <img src="guangzhou_museum.jpg" alt="Guangzhou Museum" class="photo">
+                        <div class="caption">
+                            <h4><a href="http://www.gzmuseum.com/" target="_blank">Guangzhou Museum</a></h4>
+                            <p>Dive into the cultural heritage of Guangdong Province at the Guangzhou Museum.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="chengdu_museum.jpg" alt="Chengdu Museum" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://www.cdmuseum.com/" target="_blank">Chengdu Museum</a></h4>
+                            <p>Uncover the history of Sichuan Province, from ancient times to the present.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="shenzhen_museum.jpg" alt="Shenzhen Museum" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://www.shenzhenmuseum.com/" target="_blank">Shenzhen Museum</a></h4>
+                            <p>Learn about the rapid growth of Shenzhen and its fascinating transformation into a modern city.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="hangzhou_museum.jpg" alt="Hangzhou Museum" class="photo">
+                        <div class="caption">
+                            <h4><a href="http://www.hzmuseum.com/" target="_blank">Hangzhou Museum</a></h4>
+                            <p>Immerse yourself in Hangzhou's history and culture, from tea to silk traditions.</p>
+                        </div>
+                    </div>
+                    <!-- 添加更多博物馆信息 -->
+                </div>
+            </div>
+
         </main>
         
         <div class="control_box">
-            <a href="mailto:gshan@unc.edu?subject=Hello%20there!%20I'm&body=This%20is%20a%20predefined%20email%20body." class="zoom-text">🚣🏻‍♀️</a>
+            <a href="mailto:gshan@unc.edu?subject=Hello%20there!%20I'm&body=This%20is%20a%20predefined%20email%20body." class="zoom-text">🔑</a>
         </div>
 
         <script src="script.js"></script>
