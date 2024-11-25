@@ -525,7 +525,13 @@ path {
     color: #333;
     text-align: left;
 }
-.caption > h4 a,.caption > h4 {
+.caption > p a {
+    text-decoration: none;
+    color:black;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.caption > h4 {
     text-decoration: none;
     color:black;
     cursor: pointer;
