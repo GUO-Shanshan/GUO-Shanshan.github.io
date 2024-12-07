@@ -26,14 +26,14 @@
             <!-- 中间部分 -->
             <ul class="navbar-center" id="navbar-center">
                 <li><a href="">Home</a></li>
-                <li><a href="#where-to-go">Where&nbsp;to&nbsp;go</a></li>
+                <li><a href="#china-map-container">Where&nbsp;to&nbsp;go</a></li>
                 <li><a href="#how-to-plan">How&nbsp;to&nbsp;plan</a></li>
                 <li><a href="#what-to-do">What&nbsp;to&nbsp;do</a></li>
                 
                 <li class="dropdown">
                     <a href="#information" class="dropdown-toggle">Information</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#visa-info">Visa&nbsp;Information</a></li>
+                        <li><a href="#how-to-plan">Visa&nbsp;Information</a></li>
                         <li><a href="#stay-with-us">Stay&nbsp;with&nbsp;Us</a></li>
                     </ul>
                 </li>
@@ -47,7 +47,7 @@
                 <a href="#favourites" class="icon">
                     <img src="images/heart.png" alt="collect" class="icon">
                 </a>
-                <a href="#sign-in" class="icon log-in">
+                <a href="pages/login.html" class="icon log-in">
                     Log in
                 </a>
                 <div class="language">
@@ -164,7 +164,7 @@
             </div>            
         </header>
 
-        <main class="eb-garamond-400" id="where-to-go">
+        <main class="eb-garamond-400">
             <div id="china-map-container" class="content">
                 <h2 class="hollow-text ">Destinations</h2>
                 <svg id="china-map" xmlns="http://www.w3.org/2000/svg" class="leaflet-zoom-animated" width="100%" height="100%" viewBox="100 100 700 350" preserveAspectRatio="xMidYMid meet" style="margin: 0; padding: 0;">                    
@@ -284,14 +284,17 @@
             <div class="container" id="how-to-plan">
                 <h2>Tips I Need to Know</h2>
                 <div class="accordion">
-                    <div class="accordion-item">
+                    <div class="accordion-item"><!--visa-->
                         <button class="accordion-title eb-garamond-400">Visa Requirements</button>
                         <div class="accordion-content">
-                            <p>Foreign visitors typically need a visa to enter China. Ensure you apply for the appropriate type of visa (e.g., tourist, business) well in advance of your travel dates.</p>
-                            <a href="https://www.visaforchina.org/" target="_blank">Learn More</a>
+                            <p>Foreign visitors typically need a visa to enter China. Ensure that you apply for the appropriate type of visa (e.g., tourist, business) well in advance of your travel dates.</p>
+                            <ul>
+                                <li><a href="https://en.nia.gov.cn/n147418/n147463/c156086/content.html" target="_blank">Visa-Free Transit Policy:</a> China offers a <span>24-hour, 72-hour, and 144-hour visa-free transit policy</span> for eligible foreign visitors, applicable in certain cities.</li>
+                                <li><a href="https://cova.mfa.gov.cn/qzCoCommonController.do?show&pageId=index&locale=en_US" target="_blank">China Online Visa Application (COVA):</a>You can submit your visa application through the China Online Visa Application (COVA) system, which is convenient and efficient.</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item"><!--payment-->
                         <button class="accordion-title eb-garamond-400">Payment methods in China</button>
                         <div class="accordion-content">
                             <p>The official currency in China is the Renminbi (RMB), also known as the yuan (¥). It's recommended to have some cash for small purchases, although mobile payments like Alipay and WeChat Pay are widely used.</p>
@@ -362,31 +365,52 @@
                             <a href="https://english.shanghai.gov.cn/en-PaymentMethods/20240313/6f4e58272f1a4cea9aec59c518915bdf.html" target="_blank">Learn More</a>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item"><!--language-->
                         <button class="accordion-title eb-garamond-400">Language</button>
                         <div class="accordion-content">
-                            <p>Mandarin Chinese is the official language. English is spoken in major cities, but having a translation app or phrasebook can be very helpful in more remote areas.</p>
-                            <a href="https://www.google.com/intl/en_ALL/translate/" target="_blank">Translation App</a>
+                            <p>Mandarin Chinese is the official language. English is spoken in major cities, but having a translation app or phrasebook can be very helpful in more remote areas. Note that Google Translate is not available in mainland China, so it is recommended to use alternatives such as <a href="https://www.deepl.com/en/translator" target="_blank">DeepL</a> or <a href="https://fanyi.qq.com" target="_blank">Tencent Translator</a>.</p>
+                            <a href="https://www.google.com/search?q=how+to+overcome+language+barriers+while+traveling+in+China&rlz=1C5CHFA_enAU1080AU1080&oq=how+to+overcome+language+barriers+while+traveling+in+China&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABiABBiiBDIKCAIQABiABBiiBDIKCAMQABiABBiiBDIKCAQQABiABBiiBNIBCDE4NDhqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank">Learn More</a>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item"><!--weather-->
                         <button class="accordion-title eb-garamond-400">Weather and Climate</button>
                         <div class="accordion-content">
                             <p>China is a vast country with diverse climates. Check the weather for your destination and pack accordingly. Summers can be hot and humid, while winters in the north are freezing.</p>
-                            <a href="https://weather.com/" target="_blank">Weather Info</a>
+                            <a href="https://en.weather.com.cn/" target="_blank">Weather Info</a>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item"><!--transport-->
                         <button class="accordion-title eb-garamond-400">Transportation</button>
                         <div class="accordion-content">
-                            <p>China has an extensive public transportation network, including high-speed trains, subways, and buses. Ride-hailing apps like Didi are widely used for local travel.</p>
-                            <a href="https://www.chinahighlights.com/china-trains/" target="_blank">Train Travel Guide</a>
+                            <p>China has a well-developed public transportation system, making it easy to get around. In major cities, you can use <span>subways, buses, and taxis</span>. Taxis can be hailed on the street or booked using apps like <span>Didi</span>. Some cities also offer cable cars or ferries, and most urban areas have <span>shared bikes</span> and <span>electric scooters</span> available for rent. Renting these is convenient and costs about 30 cents for a half-hour. You can use a dedicated app or simply scan a QR code with <span>Alipay or WeChat</span> for payment.</p>
+                            <p>For traveling between cities, options include high-speed trains, regular trains, flights, or driving. China’s high-speed rail system is one of the best in the world, making train travel fast and comfortable.</p>
+                            <p><b>Note:</b> Google Maps doesn’t work in mainland China, but <span>Apple Maps</span> is available for iPhone users. You can also use Chinese apps like <span>Amap (Gaode Maps)</span> or <span>Baidu Maps</span> for reliable navigation and public transportation information.</p>
+                            <ul>
+                                <li><a href="https://www.seat61.com/China.htm" target="_blank">Train Travel Guide</a> (You can directly get a ticket thru the official Railway website 12306.com or other agencies.)</li>
+                                <li><a href="https://www.farwestchina.com/blog/renting-a-car-in-china/" target="_blank">Rent a Car in China</a></li>
+                                <li><a href="https://www.travelchinacheaper.com/how-to-take-a-taxi-in-china" target="_blank">Take a Taxi in China</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item"><!--safe-->
+                        <button class="accordion-title eb-garamond-400">Health and Safety</button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>Tap water is not safe to drink in most parts of China. Bottled water is widely available. Ensure you have travel insurance and check for any required vaccinations before your trip.</li>
+                                <li>Overall, China is considered one of the safest countries in the world. You can freely walk around cities even late at night, and most shops stay open late, with malls often closing around 9 or 10 PM. Bars, nightclubs, and karaoke venues usually stay open all night.</li>
+                                <li>Many restaurants and shops may not have English labels for food items, and <span>food allergies</span> are less common in China. Restaurants typically do not ask about allergies, so it is a good idea to have <span>your allergy information translated into Chinese</span> and show it to the staff if necessary.</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-title eb-garamond-400">Health and Safety</button>
-                        <div class="accordion-content">
-                            <p>Tap water is not safe to drink in most parts of China. Bottled water is widely available. Ensure you have travel insurance and check for any required vaccinations before your trip.</p>
+                        <button class="accordion-title eb-garamond-400">Travel Tips</button>
+                        <div class="accordion-content" style="line-height: 1.6;">
+                            <ul>
+                                <li><span>Always carry some cash</span> with you, as smaller vendors or street food stalls may not accept digital payments. While Alipay and WeChat Pay are widely used, foreign cards may not always work with these platforms without proper setup.</li>
+                                <li>It's also helpful to have a <span>translation app ready</span>.</li>
+                                <li><span>Public restrooms</span> are common, but they may not always provide toilet paper. It's a good idea to carry tissues and hand sanitizer with you when traveling.</li>
+                                <li>Before coming to China, it’s advisable to <span>purchase a short-term SIM card or an international roaming data package</span>. However, once you enter mainland China, you won't be able to use apps like YouTube, Instagram, WhatsApp, or Google without a <span>VPN</span>. Make sure to set up a reliable VPN before your trip to access these services.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>   
@@ -397,13 +421,21 @@
                 <h3>Dynasty Tours</h3>
                 <div class="grid1">
                     <div class="card">
-                        <img id="timelineImage" src="images/Timeline_of_Chinese_History.jpg" alt="Timeline of Chinese History" class="photo" style="cursor: pointer;">
+                        <img id="timelineImage" src="images/Timeline_of_Chinese_History.jpg" alt="Timeline of Chinese History" class="photo_big" style="cursor: pointer;">
                         <div class="caption">
                             <h4>Discover the entire span of Chinese history from Xia to the PRC.</h4>
                             <p class="attribution">
                                 Image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Timeline_of_Chinese_History.jpg" target="_blank">SS</a>, 
                                 licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>, via Wikimedia Commons.
                             </p>
+                            <p>Discover the entire span of Chinese history, from the Xia Dynasty to the People's Republic of China, in this detailed timeline. This visual guide helps you understand the major events, influential dynasties, and key historical shifts that shaped China over millennia.</p>                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        <iframe class="photo_big" src="https://www.youtube.com/embed/Fz_uQNQBK0g?si=IAEVQ8PVC80wB1kY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="caption">
+                            <h4>All of China's Dynasties in One Video</h4>
+                            <p>Explore the complete history of China's dynasties, from the Xia to the Qing, all in one engaging video. This overview provides a great way to understand the rise and fall of different dynasties and the cultural evolution over thousands of years.</p>
                         </div>
                     </div>
                 </div>
@@ -417,17 +449,31 @@
                 <h3>Food Adventures</h3>
                 <div class="grid">
                     <div class="card">
-                        <img src="images/chuanfood.jpg" alt="Chengdu Food Street" class="photo">
+                        <img src="images/chengdufood.jpg" alt="Chengdu Food Street" class="photo">
                         <div class="caption">
-                            <h4><a href="https://www.travelchina.org.cn/sitefiles/gjly_zh/html/tourchina/6105.shtml" target="_blank">Chengdu Food Street</a></h4>
-                            <p>Enjoy spicy Sichuan cuisine in the heart of Chengdu, famous for its bold flavors and fiery spices.</p>
+                            <h4><a href="https://www.thepackablelife.com/travel/journal/chengdu-street-food" target="_blank">Chengdu Food Street</a></h4>
+                            <p>Spice up your trip with the iconic flavors of Sichuan! Enjoy sizzling hotpot and bold street snacks in the vibrant alleys of Chengdu, known as the birthplace of fiery Sichuan cuisine.</p>
+                        </div>                        
+                    </div>
+                    <div class="card">
+                        <img src="images/Dim Sum in Guangzhou.jpg" alt="Dim Sum in Guangzhou" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://www.chinahighlights.com/guangzhou/best-dim-sums-to-eat.htm" target="_blank">Dim Sum in Guangzhou</a></h4>
+                            <p>Explore the home of Cantonese dim sum in Guangzhou! Start your day with shrimp dumplings, siu mai, and egg tarts, all part of the traditional yum cha culture.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="images/yumcha.jpg" alt="Dim Sum in Guangzhou" class="photo">
+                        <img src="images/shaanxifood.png" alt="Xi'an Street Food" class="photo">
                         <div class="caption">
-                            <h4><a href="http://www.eguangzhou.gov.cn/" target="_blank">Dim Sum in Guangzhou</a></h4>
-                            <p>Explore the world of dim sum in Guangzhou, the birthplace of Cantonese cuisine and yum cha culture.</p>
+                            <h4><a href="https://www.thefoodranger.com/xian-famous-foods-you-need-to-try/" target="_blank">Xi'an Street Food</a></h4>
+                            <p>Step back in time and taste history in Xi’an’s vibrant Muslim Quarter. From savory roujiamo (Chinese burger) to chewy biangbiang noodles, this street food scene is a feast for the senses.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/guangxifood.jpeg" alt="Guangxi Cuisine" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://thenewgastronome.com/street-food-of-guangxi/" target="_blank">Guangxi's Local Delicacies</a></h4>
+                            <p>Discover the rich and diverse flavors of Guangxi! From the famous Guilin rice noodles to fresh seafood in Beihai, Guangxi offers a mix of bold and refreshing dishes that reflect its unique culture.</p>
                         </div>
                     </div>
                 </div>
@@ -435,35 +481,63 @@
                 <h3>Architectural Wonders</h3>
                 <div class="grid">
                     <div class="card">
-                        <img src="images/greatwall.jpg" alt="Great Wall of China" class="photo">
+                        <img src="images/max-van-den-oetelaar-rFC0pueaf9U-unsplash.jpg" alt="Great Wall of China" class="photo">
                         <div class="caption">
-                            <h4><a href="https://www.mutianyugreatwall.com/" target="_blank">Great Wall of China</a></h4>
+                            <h4><a href="https://en.mutianyugreatwall.com/" target="_blank">Great Wall of China</a></h4>
                             <p>Walk along the ancient Great Wall, one of the greatest architectural achievements in human history.</p>
                         </div>
                     </div>
                     <div class="card">
                         <img src="images/forbiddencity.jpg" alt="Forbidden City" class="photo">
                         <div class="caption">
-                            <h4><a href="https://en.dpm.org.cn/" target="_blank">Forbidden City</a></h4>
-                            <p>Discover the imperial palace that served as the home of Chinese emperors for over 500 years.</p>
+                            <h4><a href="https://intl.dpm.org.cn/index.html?l=en" target="_blank">Forbidden City</a></h4>
                         </div>
+                        <p>Visit the Forbidden City, the imperial palace and now the Palace Museum, showcasing over 500 years of Chinese history and culture.</p>
                     </div>
-                </div>
-                
+                    <div class="card">
+                        <img src="images/mogaocave.jpg" alt="Mogao Caves" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://whc.unesco.org/en/list/440/" target="_blank">Mogao Caves</a></h4>
+                        </div>
+                        <p>Explore the Mogao Caves in Dunhuang, a UNESCO World Heritage site famous for its stunning Buddhist art and over 1,000 years of history.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/zhangjiajie.jpg" alt="Zhangjiajie National Forest Park" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://national-parks.org/china/zhangjiajie" target="_blank">Zhangjiajie National Forest Park</a></h4>
+                        </div>
+                        <p>Discover Zhangjiajie National Forest Park, known for its breathtaking sandstone pillars and lush greenery, which inspired the floating mountains in the movie "Avatar."</p>
+                    </div>                    
+                </div>                
+                    
                 <h3>Familiar History and Figures</h3>
                 <div class="grid">
                     <div class="card">
                         <img src="images/silkroad.jpg" alt="Silk Road" class="photo">
                         <div class="caption">
-                            <h4><a href="https://www.travelchinaguide.com/silk-road/" target="_blank">Silk Road</a></h4>
+                            <h4><a href="https://en.unesco.org/silkroad/about-silk-roads" target="_blank">Silk Road</a></h4>
                             <p>Trace the historic Silk Road, the ancient trade route that connected China with Europe and the Middle East.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="images/opiumwar.jpg" alt="Opium War Museum" class="photo">
+                        <img src="images/ypzz.jpg" alt="Opium War Museum" class="photo">
                         <div class="caption">
-                            <h4><a href="http://www.opiumwarmuseum.cn/en/" target="_blank">Opium War Museum</a></h4>
+                            <h4><a href="https://www.ypzz.cn/en/f/index" target="_blank">Opium War Museum</a></h4>
                             <p>Learn about the events of the Opium War and its impact on China's modern history.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/aaron-greenwood-xZDWEEMS3sA-unsplash.jpg" alt="Terracotta Army" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://terracotta-exhibition.com/" target="_blank">Terracotta Army</a></h4>
+                            <p>Marvel at the Terracotta Army, the life-sized sculptures buried with China's first emperor, Qin Shi Huang, to guard him in the afterlife.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/confucius.jpg" alt="Confucius Temple" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://whc.unesco.org/en/list/704/" target="_blank">Temple and Cemetery of Confucius and the Kong Family Mansion in Qufu</a></h4>
+                            <p>Step into Confucius Temple in Qufu and connect with the wisdom of China's greatest thinker!</p>
                         </div>
                     </div>
                 </div>
@@ -481,74 +555,115 @@
                         <img src="images/sxhm.jpg" alt="Shaanxi History Museum" class="photo">
                         <div class="caption">
                             <h4><a href="https://www.sxhm.com/en/index.html" target="_blank">Shaanxi History Museum</a></h4>
-                            <p>......</p>
+                            <p>Explore ancient treasures from the Tang dynasty and beyond at this must-visit museum in Xi'an.</p>
                         </div>
                     </div>                   
                     <div class="card">
-                        <img src="guangzhou_museum.jpg" alt="Guangzhou Museum" class="photo">
+                        <img src="images/national_ocean_museum.jpg" alt="National Maritime Museum of China" class="photo">
                         <div class="caption">
-                            <h4><a href="http://www.gzmuseum.com/" target="_blank">Guangzhou Museum</a></h4>
-                            <p>Dive into the cultural heritage of Guangdong Province at the Guangzhou Museum.</p>
+                            <h4><a href="https://www.nmmc.cc/" target="_blank">National Maritime Museum of China</a></h4>
+                            <p>Explore China's vast maritime history and its connection to the seas at the National Maritime Museum of China.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="chengdu_museum.jpg" alt="Chengdu Museum" class="photo">
+                        <img src="images/hunan_museum.jpg" alt="Hunan Museum" class="photo">
                         <div class="caption">
-                            <h4><a href="https://www.cdmuseum.com/" target="_blank">Chengdu Museum</a></h4>
-                            <p>Uncover the history of Sichuan Province, from ancient times to the present.</p>
+                            <h4><a href="http://www.hnmuseum.com/en" target="_blank">Hunan Museum</a></h4>
+                            <p>Discover the rich history and culture of Hunan Province, including the famous Mawangdui Han Tombs, at the Hunan Museum.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="shenzhen_museum.jpg" alt="Shenzhen Museum" class="photo">
+                        <img src="images/hey_china.jpg" alt="Hey China Culture" class="photo">
                         <div class="caption">
-                            <h4><a href="https://www.shenzhenmuseum.com/" target="_blank">Shenzhen Museum</a></h4>
-                            <p>Learn about the rapid growth of Shenzhen and its fascinating transformation into a modern city.</p>
+                            <h4><a href="https://www.heychinaculture.com/" target="_blank">Hey China Culture</a></h4>
+                            <p>Explore a wide array of resources about China's cultural heritage and its contemporary expressions at Hey China Culture.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="hangzhou_museum.jpg" alt="Hangzhou Museum" class="photo">
+                        <iframe width="100%" height=auto src="https://www.youtube.com/embed/V8N-bXxkisU?si=JUg9BoV6ggo8eha-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <div class="caption">
-                            <h4><a href="http://www.hzmuseum.com/" target="_blank">Hangzhou Museum</a></h4>
-                            <p>Immerse yourself in Hangzhou's history and culture, from tea to silk traditions.</p>
+                            <h4><a href="http://www.hzmuseum.com/" target="_blank">China's Museum</a></h4>
+                            <p>Take a virtual journey through China's incredible museums and explore their rich history, art, and culture in this engaging YouTube video!</p>
                         </div>
                     </div>
-                    <!-- 添加更多博物馆信息 -->
+                    <div class="card">
+                        <img src="images/conservation.jpg" alt="Conservation Science Resources" class="photo">
+                        <div class="caption">
+                            <h4><a href="http://conservation.s.cn.vc/index.html" target="_blank">Online Resources for Conservation Science</a></h4>
+                            <p>Explore valuable resources on conservation science, preserving cultural heritage for future generations.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/xiangtangshan.jpg" alt="Xiangtangshan Caves Project" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://xts.uchicago.edu/" target="_blank">Xiangtangshan Caves Project</a></h4>
+                            <p>Delve into the digital reconstruction of the Xiangtangshan Caves, a vital effort to preserve China's ancient Buddhist heritage.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/digital_dunhuang.jpg" alt="Digital Dunhuang" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://www.e-dunhuang.com/index.htm#" target="_blank">Digital Dunhuang</a></h4>
+                            <p>Experience the Mogao Caves like never before with VR technology and panoramic views at Digital Dunhuang.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/shidianguji.jpg" alt="Shidian Guji" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://www.shidianguji.com/" target="_blank">Ancient Chinese Books Online</a></h4>
+                            <p>Explore China's ancient books with this online platform for classical literature reading.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/thousand_years.jpg" alt="Millennial Melody" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://news.cgtn.com/event/2023/The-Song-Painted-Nature/index.html" target="_blank">The Song, Painted - Nature: Song Dynasty Landscape and Flowers</a></h4>
+                            <p>Experience the dynamic digital art exhibition that brings Song Dynasty landscapes and flowers to life.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/song_dynasty_portraits.jpg" alt="Millennial Melody: Song Dynasty Portraits" class="photo">
+                        <div class="caption">
+                            <h4><a href="https://news.cgtn.com/event/2022/The-Song-Painted/index.html" target="_blank">The Song, Painted: Song Dynasty Portraits</a></h4>
+                            <p>Immerse yourself in the digital art exhibition showcasing the elegance of Song Dynasty portraiture.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="container" id="stay-with-us">
-                <h2>Stay with Us</h2>
-                <div class="contact">
-                    <form action="action_page.php">
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                    
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="emailaddress" placeholder="Your email address that we can connect with you..">
-                    
-                        <label for="country">Country</label>
-                        <select id="country" name="country">
-                            <option value="australia">Australia</option>
-                            <option value="canada">Canada</option>
-                            <option value="usa">USA</option>
-                            <option value="uk">UK</option>
-                        </select>
-                    
-                        <label for="subject">Subject</label>
-                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
-                    
-                        <input type="submit" value="Submit">
-                  
-                    </form>
-                  </div>
-            </div>
         </main>
+
+        <section id="stay-with-us">
+            <h2>Stay with Us</h2>
+            <div class="contact">
+                <form action="action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="emailaddress" placeholder="Your email address that we can connect with you..">
+                
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                    </select>
+                
+                    <label for="subject">Message</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+                
+                    <input type="submit" value="Submit">
+                
+                </form>
+            </div>
+        </section>
         
         <div class="control_box">
-            <a href="mailto:gshan@unc.edu?subject=Hello%20there!%20I'm&body=This%20is%20a%20predefined%20email%20body." class="zoom-text">🔑</a>
+            <a href="pages/login.html" class="zoom-text">🔑</a>
         </div>
 
         <script src="script.js"></script>
