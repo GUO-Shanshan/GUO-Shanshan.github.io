@@ -91,6 +91,9 @@ document.addEventListener("DOMContentLoaded", function() {
             case 'guangdong':
                 window.open("http://www.eguangzhou.gov.cn/", "_blank");
                 break;
+            case 'hubei':
+                window.open("http://en.hubei.gov.cn/tourism_2018/selectedtravelroutes/", "_blank");
+                break;
             case 'zhejiang':
                 window.open("http://www.ezhejiang.gov.cn/travel.html", "_blank");
                 break;
@@ -106,7 +109,42 @@ document.addEventListener("DOMContentLoaded", function() {
             case 'chongqing':
                 window.open("https://www.ichongqing.info/","_blank");
                 break;
-            // 你可以继续为其他省份添加对应的跳转链接
+            case 'shanxi':
+                window.open("http://www.goshanxi.com.cn/","_blank");
+                break;
+            case 'shaanxi':
+                window.open("https://www.instagram.com/visit_shaanxi/?hl=en","_blank");
+                break;
+            case 'hainan':
+                window.open("http://www.ehainan.gov.cn/","_blank");
+                break;
+            case 'gansu':
+                window.open("http://www.gogansu.com/","_blank");
+                break;
+            case 'shandong':
+                window.open("http://shandong.chinadaily.com.cn/","_blank");
+                break;
+            case 'hong_kong_special_administrative_region':
+                window.open("https://www.discoverhongkong.com/us/index.html","_blank");
+                break;
+            case 'macau_special_administrative_region':
+                window.open("https://www.dst.gov.mo/en/home.html","_blank");
+                break;
+            case 'fujian':
+                window.open("http://www.gofujian.com.cn/usefulinfo.html","_blank");
+                break;
+            case 'sichuan':
+                window.open("https://www.sichuantravelguide.com/","_blank");
+                break;
+            case 'jilin':
+                window.open("https://www.gojilin.gov.cn/","_blank");
+                break;
+            case 'heilongjiang':
+                window.open("https://www.saporedicina.com/english/travel-to-heilongjiang/","_blank");
+                break;
+            case 'liaoning':
+                window.open("https://www.travellerspoint.com/guide/Liaoning/","_blank");
+                break;
             default:
                 alert("No official tourism site linked for this region yet.");
         }
